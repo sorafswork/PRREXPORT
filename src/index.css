@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --color-olive-green: #68734B;
+  --color-chocolate-brown: #573B2E;
+  --color-coffee-brown: #624735;
+  --color-organic-olive: #6A6F4C;
+  --color-butter-beige: #CBB89D;
+  --color-coconut-cream: #EDE1D2;
+  --color-natural-brown: #806044;
+  --color-palm-brown: #5D2510;
+  --color-cocoa-brown: #412F26;
+  --color-soft-ivory: #E4DAC2;
+  --color-soft-clay: #E2C5B6;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: #EDE1D2;
+  color: #412F26;
+}
+
+/* Custom Scrollbar in earthy tones */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #EDE1D2;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBB89D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #806044;
+}
+
+/* Continuous Horizontal Ribbon Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.group:hover .animate-marquee,
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+    transform: none;
+  }
+}
+
+/* Animatic Nature & Ken Burns Animations */
+@keyframes kenBurns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate(-1.2%, -1%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenBurns 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes sunbeamPulse {
+  0%, 100% {
+    opacity: 0.25;
+    transform: rotate(-10deg) scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: rotate(-6deg) scale(1.08);
+  }
+}
+
+.animate-sunbeam {
+  animation: sunbeamPulse 7s ease-in-out infinite;
+}
+
+@keyframes palmSway {
+  0%, 100% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  50% {
+    transform: rotate(1.5deg) skewX(1deg);
+  }
+}
+
+.animate-palm-sway {
+  animation: palmSway 9s ease-in-out infinite;
+  transform-origin: top left;
+}
+
