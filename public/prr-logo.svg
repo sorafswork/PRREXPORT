@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560">
+  <rect width="960" height="560" fill="#FFFFFF" />
+  <!-- Top Center PR Monogram -->
+  <g transform="translate(390, 42) scale(0.38)">
+    <path
+      d="M 91 48 L 285 48 C 374 48, 428 104, 428 182 C 428 248, 382 297, 304 307 L 426 468 L 365 468 C 350 468, 337 460, 326 446 L 198 296 L 284 296 C 340 296, 378 250, 378 182 C 378 128, 341 99, 282 99 L 132 99 C 104 99, 91 78, 91 48 Z"
+      fill="#72B62C"
+    />
+    <path
+      d="M 79 114 L 280 114 C 334 114, 371 146, 371 196 C 371 246, 333 279, 278 279 L 130 279 L 130 434 C 130 456, 114 469, 92 469 L 79 469 L 79 228 L 273 228 C 302 228, 320 215, 320 196 C 320 177, 302 164, 273 164 L 119 164 C 94 164, 79 144, 79 114 Z"
+      fill="#0B6127"
+    />
+    <path
+      d="M 131 304 L 185 304 L 328 468 L 287 468 C 271 468, 258 461, 246 446 Z"
+      fill="#D2E40F"
+    />
+  </g>
+  <!-- Double Leaf Accent Above Wordmark -->
+  <g transform="translate(612, 265)">
+    <path d="M 38 68 C 14 52, 16 18, 66 0 C 66 36, 56 58, 38 68 Z" fill="#0B6127" />
+    <path d="M 30 68 C 44 68, 70 60, 92 38 C 68 38, 44 48, 30 68 Z" fill="#72B62C" />
+  </g>
+  <!-- Company Wordmark -->
+  <text
+    x="480"
+    y="404"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="700"
+    font-size="64"
+    letter-spacing="1.5"
+    fill="#0B6127"
+  >P R GNANARAJA</text>
+  <!-- Tagline -->
+  <text
+    x="480"
+    y="450"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="500"
+    font-size="24"
+    letter-spacing="4"
+    fill="#7FA650"
+  >A UNIVERSAL VALUE</text>
+  <!-- Bottom Green Accent Strip -->
+  <rect x="0" y="520" width="960" height="40" fill="#009914" />
+</svg>

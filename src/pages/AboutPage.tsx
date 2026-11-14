@@ -3,6 +3,12 @@ import { COMPANY_INFO } from '../data/company';
 import { Product } from '../types';
 import { AboutProductShowcase } from '../components/AboutProductShowcase';
 import { Sprout, Factory, Globe2, MapPin, ArrowUpRight } from 'lucide-react';
+import {
+  heroCoconutGroveImg,
+  coconutOilBottlesImg,
+  cocopeatBlocksImg,
+  coirEcoProductsImg,
+} from '../assets/images';
 
 interface AboutPageProps {
   onNavigate: (page: 'home' | 'about' | 'product' | 'contact') => void;
@@ -37,9 +43,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
             <div className="lg:col-span-6">
               <div className="relative rounded-2xl overflow-hidden border border-[#CBB89D] shadow-lg bg-white aspect-[4/3] group">
                 <img
-                  src="/src/assets/images/hero_coconut_grove_1794485759369.jpg"
+                  src={heroCoconutGroveImg}
                   alt="Thanjavur coconut groves"
-                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#412F26]/70 via-transparent to-transparent pointer-events-none" />
@@ -104,9 +109,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
             <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm group">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src="/src/assets/images/hero_coconut_grove_1794485759369.jpg"
+                  src={heroCoconutGroveImg}
                   alt="Coconut Palm Plantation"
-                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -119,9 +123,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
             <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm group">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src="/src/assets/images/coconut_oil_bottles_1794485760376.jpg"
+                  src={coconutOilBottlesImg}
                   alt="Coconut Oil Extraction"
-                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -134,9 +137,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
             <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm group">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src="/src/assets/images/cocopeat_blocks_1794485761298.jpg"
+                  src={cocopeatBlocksImg}
                   alt="Cocopeat 5kg Blocks"
-                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -149,9 +151,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
             <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm group">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src="/src/assets/images/coir_eco_products_1794485762086.jpg"
+                  src={coirEcoProductsImg}
                   alt="Coir Biodegradable Pots"
-                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>

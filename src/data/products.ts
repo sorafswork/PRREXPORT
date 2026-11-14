@@ -1,4 +1,10 @@
 import { Product } from '../types';
+import {
+  coconutOilBottlesImg,
+  cocopeatBlocksImg,
+  coirEcoProductsImg,
+  futureOilSeedsImg,
+} from '../assets/images';
 
 export const PRODUCTS: Product[] = [
   // COCONUT OIL PRODUCTS (Manufacturing)
@@ -10,7 +16,7 @@ export const PRODUCTS: Product[] = [
     businessType: 'Manufacturing',
     tagline: '100% Natural, Unrefined & Unsulphured Rotary Pressed Oil',
     description: 'Pure, authentic edible grade coconut oil produced through traditional rotary extraction from premium sun-dried copra. Unrefined, free from chemical bleaching, artificial additives, and sulphuring agents.',
-    image: '/src/assets/images/coconut_oil_bottles_1794485760376.jpg',
+    image: coconutOilBottlesImg,
     rawMaterial: 'Coconut copra',
     extractionOrProcess: 'Rotary extraction',
     features: [
@@ -41,7 +47,7 @@ export const PRODUCTS: Product[] = [
     businessType: 'Manufacturing',
     tagline: 'Pure Cold-Processed Fermentation Extracted from Fresh Coconut Milk',
     description: 'Ultra-pure, crystal clear virgin coconut oil extracted directly from freshly pressed coconut milk via natural fermentation. Retains natural antioxidants, vitamins, and medium-chain fatty acids (Lauric Acid).',
-    image: '/src/assets/images/coconut_oil_bottles_1794485760376.jpg',
+    image: coconutOilBottlesImg,
     rawMaterial: 'Fresh Coconut milk',
     extractionOrProcess: 'Fermentation extraction',
     features: [
@@ -74,7 +80,7 @@ export const PRODUCTS: Product[] = [
     businessType: 'Merchant Export',
     tagline: 'Compressed Coir Discs for Seed Germination & Nursery Propagation',
     description: 'Precision-compressed circular cocopeat discs designed for effortless seed starting, cloning, and seedling plugs. Expands quickly upon watering to provide the optimal air-to-water ratio for root development.',
-    image: '/src/assets/images/cocopeat_blocks_1794485761298.jpg',
+    image: cocopeatBlocksImg,
     rawMaterial: 'Washed Cocopeat pith',
     extractionOrProcess: 'Screened & Compressed',
     features: [
@@ -106,7 +112,7 @@ export const PRODUCTS: Product[] = [
     businessType: 'Merchant Export',
     tagline: 'High-Expansion Compressed 5 kg Blocks for Agriculture & Horticulture',
     description: 'Standard 5 kg compressed cocopeat blocks washed for low electrical conductivity. Exceptional moisture retention, optimal porosity, and proven root aeration for commercial greenhouses, potting soil blenders, and farms.',
-    image: '/src/assets/images/cocopeat_blocks_1794485761298.jpg',
+    image: cocopeatBlocksImg,
     rawMaterial: 'Aged Cocopeat pith',
     extractionOrProcess: 'Hydraulic high compression',
     features: [
@@ -139,7 +145,7 @@ export const PRODUCTS: Product[] = [
     businessType: 'Merchant Export',
     tagline: 'Retail-Ready Compressed Briquettes for Home Gardens & Planters',
     description: 'Compact 650 gram cocopeat bricks engineered for retail garden centers, landscapers, and home horticulturists. Quick hydration yields approximately 8 litres of rich growing substrate.',
-    image: '/src/assets/images/cocopeat_blocks_1794485761298.jpg',
+    image: cocopeatBlocksImg,
     rawMaterial: 'Cocopeat',
     extractionOrProcess: 'Hydraulic mini-briquetting',
     features: [
@@ -173,7 +179,7 @@ export const PRODUCTS: Product[] = [
     businessType: 'Merchant Export',
     tagline: '100% Biodegradable Coir Fibre Pots for Direct Soil Transplantation',
     description: 'Natural molded coir fibre planting pots bound with natural latex. Enables root penetration through pot walls without root circling. Can be planted directly into the ground without root disturbance or transplant shock.',
-    image: '/src/assets/images/coir_eco_products_1794485762086.jpg',
+    image: coirEcoProductsImg,
     rawMaterial: 'Natural coconut coir fibre',
     extractionOrProcess: 'Hydraulic molding with natural latex binder',
     features: [
@@ -203,7 +209,7 @@ export const PRODUCTS: Product[] = [
     businessType: 'Merchant Export',
     tagline: 'Natural Biodegradable Scouring Pads for Kitchen & Cleaning',
     description: 'Tough, natural coir fibre scrubbers crafted for non-scratch kitchen and utility cleaning. Non-toxic, naturally antimicrobial, odor-resistant, and entirely plastic-free alternative to synthetic nylon pads.',
-    image: '/src/assets/images/coir_eco_products_1794485762086.jpg',
+    image: coirEcoProductsImg,
     rawMaterial: 'Coir fibre',
     extractionOrProcess: 'Machine woven & stitched / pressed',
     features: [
@@ -234,7 +240,7 @@ export const PRODUCTS: Product[] = [
     businessType: 'Merchant Export',
     tagline: 'Durable Natural Coir Doormats with Non-Slip PVC Rubber Backing',
     description: 'Heavy-duty entrance mats manufactured from dense natural coir bristles mechanically bonded to a slip-resistant PVC backing. High dirt-scraping capability with plain or custom printed export designs.',
-    image: '/src/assets/images/coir_eco_products_1794485762086.jpg',
+    image: coirEcoProductsImg,
     rawMaterial: 'Coir fibre and PVC backing',
     extractionOrProcess: 'Needle punched coir bonded with PVC',
     features: [
@@ -269,7 +275,7 @@ export const UPCOMING_PRODUCTS = [
     rawMaterial: 'Selected Premium Sesame Seeds',
     type: 'Cold Pressed Traditional Oil',
     description: 'Small-scale artisanal cold-pressed sesame oil manufacturing planned as part of our upcoming facilities expansion in Tamil Nadu.',
-    image: '/src/assets/images/future_oil_seeds_1794485761510.jpg',
+    image: futureOilSeedsImg,
     note: 'Under active facility planning. Commercial bulk availability scheduled for next year.'
   },
   {
@@ -280,7 +286,7 @@ export const UPCOMING_PRODUCTS = [
     rawMaterial: 'Farm-Fresh Shelled Groundnuts (Peanuts)',
     type: 'Pure Cold Pressed Peanut Oil',
     description: 'Traditional rotary cold-pressed groundnut oil expansion from locally farmed peanuts in Tamil Nadu, delivering rich natural taste and aroma.',
-    image: '/src/assets/images/future_oil_seeds_1794485761510.jpg',
+    image: futureOilSeedsImg,
     note: 'Facility engineering underway. Commercial bulk availability scheduled for next year.'
   }
 ];

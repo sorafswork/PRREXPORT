@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, ArrowUpRight, Phone } from 'lucide-react';
 import { COMPANY_INFO } from '../data/company';
+import { prrIconImg } from '../assets/images';
 
 interface HeaderProps {
   currentPage: 'home' | 'about' | 'product' | 'contact';
@@ -52,12 +53,11 @@ export const Header: React.FC<HeaderProps> = ({
           className="flex items-center gap-3 text-left group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#68734B]"
           aria-label="P R GNANARAJA EXPORT Homepage"
         >
-          {/* Official Icon from User Upload */}
+          {/* Official Brand Logo Icon */}
           <div className="w-10 h-10 rounded-lg overflow-hidden bg-white border border-[#CBB89D]/60 flex items-center justify-center p-0.5 shadow-sm shrink-0 group-hover:scale-105 transition-transform">
             <img
-              src="/assets/aistudio/PRR_Icon_e6f3f1f7.jpg"
+              src={prrIconImg}
               alt="P R GNANARAJA Emblem"
-              referrerPolicy="no-referrer"
               className="w-full h-full object-contain"
             />
           </div>

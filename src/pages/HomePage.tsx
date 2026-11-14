@@ -1,6 +1,7 @@
 import React from 'react';
 import { HeroVideo } from '../components/HeroVideo';
 import { ArrowRight, Sprout } from 'lucide-react';
+import { heroCoconutGroveImg } from '../assets/images';
 
 interface HomePageProps {
   onNavigate: (page: 'home' | 'about' | 'product' | 'contact') => void;
@@ -29,9 +30,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="lg:col-span-6">
               <div className="relative rounded-2xl overflow-hidden border border-[#CBB89D] shadow-xl bg-white aspect-[4/3] group">
                 <img
-                  src="/src/assets/images/hero_coconut_grove_1794485759369.jpg"
+                  src={heroCoconutGroveImg}
                   alt="Authentic coconut groves and plantation in Thanjavur, Tamil Nadu"
-                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#412F26]/60 via-transparent to-transparent pointer-events-none" />

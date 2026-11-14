@@ -4,6 +4,11 @@ import { MessageCircle, ArrowRight, ArrowLeft, Check, Sparkles } from 'lucide-re
 import { Product } from '../types';
 import { PRODUCTS } from '../data/products';
 import { COMPANY_INFO } from '../data/company';
+import {
+  coconutOilBottlesImg,
+  cocopeatBlocksImg,
+  coirEcoProductsImg,
+} from '../assets/images';
 
 interface AboutProductShowcaseProps {
   onOrderNow: (product: Product) => void;
@@ -25,7 +30,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Natural Coconut Oil',
       categoryLabel: 'Small-Scale Manufacturing',
       shortDesc: 'Naturally prepared coconut oil for everyday use. 100% natural, unrefined, and rotary extracted from sun-dried copra.',
-      image: '/src/assets/images/coconut_oil_bottles_1794485760376.jpg',
+      image: coconutOilBottlesImg,
       productRef: PRODUCTS[0],
     },
     {
@@ -33,7 +38,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Virgin Coconut Oil',
       categoryLabel: 'Small-Scale Manufacturing',
       shortDesc: 'Pure cold-fermented oil extracted straight from fresh coconut milk, retaining natural antioxidants and delicate aroma.',
-      image: '/src/assets/images/coconut_oil_bottles_1794485760376.jpg',
+      image: coconutOilBottlesImg,
       productRef: PRODUCTS[1],
     },
     {
@@ -41,7 +46,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Cocopeat Disc',
       categoryLabel: 'Merchant Export',
       shortDesc: 'Lightweight, rapid-expansion coir discs engineered for seed starting, cuttings, and nursery propagation.',
-      image: '/src/assets/images/cocopeat_blocks_1794485761298.jpg',
+      image: cocopeatBlocksImg,
       productRef: PRODUCTS[2],
     },
     {
@@ -49,7 +54,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Cocopeat 5 kg Blocks',
       categoryLabel: 'Merchant Export',
       shortDesc: 'High-expansion (17–19 L/kg) washed coir blocks with low electrical conductivity (EC < 0.5) for commercial farms and horticulture.',
-      image: '/src/assets/images/cocopeat_blocks_1794485761298.jpg',
+      image: cocopeatBlocksImg,
       productRef: PRODUCTS[3],
     },
     {
@@ -57,7 +62,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Cocopeat 650 gram Bricks',
       categoryLabel: 'Merchant Export',
       shortDesc: 'Convenient 650g briquettes yielding 8 litres of rich growing substrate, perfect for home gardening and retail garden centers.',
-      image: '/src/assets/images/cocopeat_blocks_1794485761298.jpg',
+      image: cocopeatBlocksImg,
       productRef: PRODUCTS[4],
     },
     {
@@ -65,7 +70,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Coir Pots',
       categoryLabel: 'Merchant Export',
       shortDesc: '100% biodegradable coir fiber pots for direct soil transplantation without root disturbance or transplant shock.',
-      image: '/src/assets/images/coir_eco_products_1794485762086.jpg',
+      image: coirEcoProductsImg,
       productRef: PRODUCTS[5],
     },
     {
@@ -73,7 +78,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Coir Scrubbers',
       categoryLabel: 'Merchant Export',
       shortDesc: 'Eco-friendly, non-scratch natural coir fiber scouring pads for plastic-free kitchen and utility cleaning.',
-      image: '/src/assets/images/coir_eco_products_1794485762086.jpg',
+      image: coirEcoProductsImg,
       productRef: PRODUCTS[6],
     },
     {
@@ -81,7 +86,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Coir PVC Backed Mats',
       categoryLabel: 'Merchant Export',
       shortDesc: 'Heavy-duty entrance mats crafted from dense natural coir bristles with non-slip PVC rubber backing.',
-      image: '/src/assets/images/coir_eco_products_1794485762086.jpg',
+      image: coirEcoProductsImg,
       productRef: PRODUCTS[7],
     },
   ];

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAD28B" />
+      <stop offset="50%" stop-color="#C89F3C" />
+      <stop offset="100%" stop-color="#8C6A1B" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="#FFFFFF" />
+  <!-- Outer Gold Crescent Arc -->
+  <path
+    d="M 455 154
+       A 112 112 0 1 1 304 205
+       A 103 103 0 1 0 455 154 Z"
+    fill="url(#goldGrad)"
+  />
+  <!-- Inner Deep Green Open Circle -->
+  <path
+    d="M 400 182
+       A 74 74 0 1 1 334 295
+       A 74 74 0 0 1 395 182"
+    fill="none"
+    stroke="#0A6228"
+    stroke-width="6.5"
+    stroke-linecap="round"
+  />
+  <!-- Center Twin Leaf Emblem -->
+  <g transform="translate(362, 186)">
+    <!-- Large Primary Leaf -->
+    <path
+      d="M 38 18 C 58 42, 62 78, 36 106 C 14 78, 18 42, 38 18 Z"
+      fill="#0A6228"
+    />
+    <!-- Small Side Leaf -->
+    <path
+      d="M 10 64 C 24 66, 36 80, 35 104 C 18 98, 10 82, 10 64 Z"
+      fill="#0A6228"
+    />
+    <!-- White Center Vein -->
+    <path
+      d="M 38 30 C 42 54, 41 80, 36 106"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="2.5"
+      stroke-linecap="round"
+    />
+    <!-- Stem Sweep -->
+    <path
+      d="M 36 106 C 36 118, 44 123, 55 123"
+      fill="none"
+      stroke="#0A6228"
+      stroke-width="4.5"
+      stroke-linecap="round"
+    />
+  </g>
+  <!-- DHAYALI Wordmark -->
+  <text
+    x="400"
+    y="462"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="400"
+    font-size="88"
+    letter-spacing="14"
+    fill="#0A6228"
+  >DHAYALI</text>
+  <!-- Tagline -->
+  <text
+    x="400"
+    y="532"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-weight="700"
+    font-size="30"
+    letter-spacing="3.5"
+    fill="#C59B27"
+  >Experience the purity</text>
+</svg>

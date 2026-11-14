@@ -1,5 +1,6 @@
 import React from 'react';
 import { COMPANY_INFO } from '../data/company';
+import { prrIconImg } from '../assets/images';
 import { MapPin, Phone, Mail, MessageCircle, ExternalLink, Globe } from 'lucide-react';
 
 interface FooterProps {
@@ -22,9 +23,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestQuote }) =>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg overflow-hidden bg-white border border-[#CBB89D]/40 p-0.5 flex items-center justify-center shrink-0">
                 <img
-                  src="/assets/aistudio/PRR_Icon_e6f3f1f7.jpg"
+                  src={prrIconImg}
                   alt="P R GNANARAJA Emblem"
-                  referrerPolicy="no-referrer"
                   className="w-full h-full object-contain"
                 />
               </div>

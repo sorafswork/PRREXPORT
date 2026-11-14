@@ -14,7 +14,6 @@ import { QuoteModal } from './components/QuoteModal';
 import { ProductDetailModal } from './components/ProductDetailModal';
 import { CatalogueModal } from './components/CatalogueModal';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
-import { CoconutTouchEffect } from './components/CoconutTouchEffect';
 import { Product } from './types';
 
 export default function App() {
@@ -89,9 +88,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#EDE1D2] text-[#412F26] relative selection:bg-[#68734B]/30 selection:text-[#573B2E]">
-      {/* Interactive Coconut Touch & Scroll Particle Effect */}
-      <CoconutTouchEffect />
-
       {/* Sticky Header with Active Section Spy */}
       <Header
         currentPage={activeSection}
