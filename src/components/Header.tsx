@@ -31,13 +31,13 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="sticky top-0 z-40 bg-[#EDE1D2]/95 backdrop-blur-md border-b border-[#CBB89D]/40 transition-colors">
       {/* 1. Mobile View Top Contact Bar (Visible on mobile screens < md) */}
-      <div className="md:hidden bg-[#68734B] text-[#EDE1D2] px-4 py-2 text-xs flex items-center justify-between border-b border-[#573B2E]/20">
+      <div className="md:hidden bg-[#68734B] text-[#EDE1D2] px-4 py-1.5 text-[11px] flex items-center justify-between border-b border-[#573B2E]/20">
         <a
           href={`tel:${COMPANY_INFO.phone}`}
-          className="flex items-center gap-2 font-mono font-medium hover:text-white transition-colors"
+          className="flex items-center gap-1.5 font-mono font-medium hover:text-white transition-colors"
           aria-label="Call P R GNANARAJA EXPORT"
         >
-          <Phone className="w-3.5 h-3.5 text-[#EDE1D2]" />
+          <Phone className="w-3 h-3 text-[#EDE1D2] shrink-0" />
           <span>{COMPANY_INFO.phoneDisplay}</span>
         </a>
         <span className="text-[10px] text-[#EDE1D2]/90 uppercase tracking-wider font-semibold">
@@ -46,26 +46,26 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* 2. Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between gap-3 md:gap-8">
         {/* Zone 1: Official Brand Logo & Wordmark */}
         <button
           onClick={() => handleNavClick('home')}
-          className="flex items-center gap-3 text-left group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#68734B]"
+          className="flex items-center gap-2.5 sm:gap-3 text-left min-w-0 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#68734B]"
           aria-label="P R GNANARAJA EXPORT Homepage"
         >
           {/* Official Brand Logo Icon */}
-          <div className="w-10 h-10 rounded-lg overflow-hidden bg-white border border-[#CBB89D]/60 flex items-center justify-center p-0.5 shadow-sm shrink-0 group-hover:scale-105 transition-transform">
+          <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg overflow-hidden bg-white border border-[#CBB89D]/60 flex items-center justify-center p-0.5 shadow-sm shrink-0 group-hover:scale-105 transition-transform">
             <img
               src={prrIconImg}
               alt="P R GNANARAJA Emblem"
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="flex flex-col">
-            <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-[#412F26] whitespace-nowrap shrink-0 group-hover:text-[#68734B] transition-colors leading-tight">
+          <div className="flex flex-col min-w-0">
+            <span className="font-serif text-[15px] sm:text-xl font-bold tracking-tight text-[#412F26] truncate group-hover:text-[#68734B] transition-colors leading-tight">
               P R GNANARAJA EXPORT
             </span>
-            <span className="text-[10px] uppercase tracking-wider text-[#68734B] font-semibold hidden sm:inline">
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-[#68734B] font-semibold truncate">
               Farming · Manufacturing · Export
             </span>
           </div>

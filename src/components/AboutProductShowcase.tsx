@@ -5,9 +5,14 @@ import { Product } from '../types';
 import { PRODUCTS } from '../data/products';
 import { COMPANY_INFO } from '../data/company';
 import {
-  coconutOilBottlesImg,
-  cocopeatBlocksImg,
-  coirEcoProductsImg,
+  productNaturalCoconutOilImg,
+  productVirginCoconutOilImg,
+  productCocopeatJiffyDiscsImg,
+  productCocopeat5kgBlocksImg,
+  productCocopeat650gBricksImg,
+  productCoirPotsImg,
+  productCoirScrubbersImg,
+  productCoirPvcMatImg,
 } from '../assets/images';
 
 interface AboutProductShowcaseProps {
@@ -30,7 +35,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Natural Coconut Oil',
       categoryLabel: 'Small-Scale Manufacturing',
       shortDesc: 'Naturally prepared coconut oil for everyday use. 100% natural, unrefined, and rotary extracted from sun-dried copra.',
-      image: coconutOilBottlesImg,
+      image: productNaturalCoconutOilImg,
       productRef: PRODUCTS[0],
     },
     {
@@ -38,7 +43,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Virgin Coconut Oil',
       categoryLabel: 'Small-Scale Manufacturing',
       shortDesc: 'Pure cold-fermented oil extracted straight from fresh coconut milk, retaining natural antioxidants and delicate aroma.',
-      image: coconutOilBottlesImg,
+      image: productVirginCoconutOilImg,
       productRef: PRODUCTS[1],
     },
     {
@@ -46,7 +51,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Cocopeat Disc',
       categoryLabel: 'Merchant Export',
       shortDesc: 'Lightweight, rapid-expansion coir discs engineered for seed starting, cuttings, and nursery propagation.',
-      image: cocopeatBlocksImg,
+      image: productCocopeatJiffyDiscsImg,
       productRef: PRODUCTS[2],
     },
     {
@@ -54,7 +59,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Cocopeat 5 kg Blocks',
       categoryLabel: 'Merchant Export',
       shortDesc: 'High-expansion (17–19 L/kg) washed coir blocks with low electrical conductivity (EC < 0.5) for commercial farms and horticulture.',
-      image: cocopeatBlocksImg,
+      image: productCocopeat5kgBlocksImg,
       productRef: PRODUCTS[3],
     },
     {
@@ -62,7 +67,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Cocopeat 650 gram Bricks',
       categoryLabel: 'Merchant Export',
       shortDesc: 'Convenient 650g briquettes yielding 8 litres of rich growing substrate, perfect for home gardening and retail garden centers.',
-      image: cocopeatBlocksImg,
+      image: productCocopeat650gBricksImg,
       productRef: PRODUCTS[4],
     },
     {
@@ -70,7 +75,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Coir Pots',
       categoryLabel: 'Merchant Export',
       shortDesc: '100% biodegradable coir fiber pots for direct soil transplantation without root disturbance or transplant shock.',
-      image: coirEcoProductsImg,
+      image: productCoirPotsImg,
       productRef: PRODUCTS[5],
     },
     {
@@ -78,7 +83,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Coir Scrubbers',
       categoryLabel: 'Merchant Export',
       shortDesc: 'Eco-friendly, non-scratch natural coir fiber scouring pads for plastic-free kitchen and utility cleaning.',
-      image: coirEcoProductsImg,
+      image: productCoirScrubbersImg,
       productRef: PRODUCTS[6],
     },
     {
@@ -86,7 +91,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
       name: 'Coir PVC Backed Mats',
       categoryLabel: 'Merchant Export',
       shortDesc: 'Heavy-duty entrance mats crafted from dense natural coir bristles with non-slip PVC rubber backing.',
-      image: coirEcoProductsImg,
+      image: productCoirPvcMatImg,
       productRef: PRODUCTS[7],
     },
   ];
@@ -110,14 +115,14 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
   };
 
   return (
-    <section className="py-20 bg-[#68734B] text-[#EDE1D2] border-y border-[#573B2E]/30 overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-20 bg-[#68734B] text-[#EDE1D2] border-y border-[#573B2E]/30 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 space-y-2">
           <span className="text-xs font-semibold uppercase tracking-widest text-[#E4DAC2]">
             Visual Product Storytelling
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#EDE1D2]">
+          <h2 className="font-serif text-2xl sm:text-4xl font-bold text-[#EDE1D2]">
             Our Natural Product Range
           </h2>
           <p className="text-xs sm:text-sm text-[#EDE1D2]/80">
@@ -125,17 +130,17 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
           </p>
         </div>
 
-        {/* Product Navigation Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
+        {/* Product Navigation Pills (Horizontal swipe strip on mobile, centered wrap on desktop) */}
+        <div className="flex md:flex-wrap items-center justify-start md:justify-center gap-2 mb-6 sm:mb-10 overflow-x-auto no-scrollbar pb-2 -mx-4 px-4 md:mx-0 md:px-0">
           {showcaseProducts.map((p, idx) => {
             const isActive = idx === activeIndex;
             return (
               <button
                 key={p.id}
                 onClick={() => setActiveIndex(idx)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                className={`px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap shrink-0 transition-all ${
                   isActive
-                    ? 'bg-[#573B2E] text-[#EDE1D2] shadow-md scale-105'
+                    ? 'bg-[#573B2E] text-[#EDE1D2] shadow-md'
                     : 'bg-[#EDE1D2]/15 text-[#EDE1D2] hover:bg-[#EDE1D2]/30'
                 }`}
               >
@@ -146,7 +151,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
         </div>
 
         {/* Animated Product Showcase Card */}
-        <div className="bg-[#573B2E] border border-[#EDE1D2]/20 rounded-2xl p-6 sm:p-10 shadow-2xl relative">
+        <div className="bg-[#573B2E] border border-[#EDE1D2]/20 rounded-2xl p-4 sm:p-8 lg:p-10 shadow-2xl relative">
           <AnimatePresence mode="wait">
             <motion.div
               key={current.id}
@@ -154,7 +159,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35, ease: 'easeOut' }}
-              className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center"
+              className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-12 items-center"
             >
               {/* Product Visual Container */}
               <div className="md:col-span-6">
@@ -162,7 +167,6 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
                   <motion.img
                     src={current.image}
                     alt={current.name}
-                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover"
                     initial={{ scale: 0.96 }}
                     animate={{ scale: 1 }}
@@ -175,7 +179,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
               </div>
 
               {/* Product Info & Order Action */}
-              <div className="md:col-span-6 space-y-5">
+              <div className="md:col-span-6 space-y-4 sm:space-y-5">
                 <div className="space-y-1">
                   <span className="text-[11px] uppercase tracking-widest text-[#CBB89D] font-semibold">
                     Product {activeIndex + 1} of {showcaseProducts.length}
@@ -191,13 +195,13 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
 
                 {/* Technical highlights summary */}
                 <div className="p-3.5 bg-[#412F26]/60 rounded-lg border border-[#EDE1D2]/10 text-xs space-y-1.5 text-[#CBB89D]">
-                  <div className="flex justify-between">
+                  <div className="flex flex-wrap justify-between gap-2">
                     <span>Raw Material:</span>
-                    <span className="font-semibold text-[#EDE1D2]">{current.productRef.rawMaterial}</span>
+                    <span className="font-semibold text-[#EDE1D2] text-right">{current.productRef.rawMaterial}</span>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex flex-wrap justify-between gap-2">
                     <span>Export Packaging:</span>
-                    <span className="font-semibold text-[#EDE1D2]">{current.productRef.packaging}</span>
+                    <span className="font-semibold text-[#EDE1D2] text-right">{current.productRef.packaging}</span>
                   </div>
                 </div>
 

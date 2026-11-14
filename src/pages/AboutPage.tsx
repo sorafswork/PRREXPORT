@@ -19,9 +19,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
   return (
     <div className="bg-[#EDE1D2] text-[#412F26]">
       {/* 1. HERO SECTION (Olive Green Accent Background) */}
-      <section className="bg-[#68734B] text-[#EDE1D2] py-20 border-b border-[#573B2E]/20">
+      <section className="bg-[#68734B] text-[#EDE1D2] py-12 sm:py-16 md:py-20 border-b border-[#573B2E]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-4">
+          <div className="max-w-3xl space-y-3 sm:space-y-4">
             <span className="text-xs font-semibold uppercase tracking-widest text-[#E4DAC2]">
               About P R GNANARAJA EXPORT
             </span>
@@ -36,9 +36,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
       </section>
 
       {/* 2. VISUAL SPLIT INTRODUCTION (Coconut Cream Background) */}
-      <section className="py-20 bg-[#EDE1D2] border-b border-[#CBB89D]/40">
+      <section className="py-12 sm:py-16 md:py-20 bg-[#EDE1D2] border-b border-[#CBB89D]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Visual Farm Imagery */}
             <div className="lg:col-span-6">
               <div className="relative rounded-2xl overflow-hidden border border-[#CBB89D] shadow-lg bg-white aspect-[4/3] group">
@@ -71,18 +71,18 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
               </p>
 
               {/* Three Business Activities Visual Strip */}
-              <div className="grid grid-cols-3 gap-3 pt-2">
-                <div className="p-3 bg-[#E4DAC2] border border-[#CBB89D] rounded-lg text-center">
-                  <Sprout className="w-5 h-5 mx-auto text-[#68734B] mb-1" />
-                  <p className="font-serif font-bold text-xs text-[#573B2E]">Farming</p>
+              <div className="grid grid-cols-3 gap-2 sm:gap-3 pt-2">
+                <div className="p-2.5 sm:p-3 bg-[#E4DAC2] border border-[#CBB89D] rounded-lg text-center">
+                  <Sprout className="w-4 h-4 sm:w-5 sm:h-5 mx-auto text-[#68734B] mb-1" />
+                  <p className="font-serif font-bold text-[11px] sm:text-xs text-[#573B2E]">Farming</p>
                 </div>
-                <div className="p-3 bg-[#E4DAC2] border border-[#CBB89D] rounded-lg text-center">
-                  <Factory className="w-5 h-5 mx-auto text-[#68734B] mb-1" />
-                  <p className="font-serif font-bold text-xs text-[#573B2E]">Manufacturing</p>
+                <div className="p-2.5 sm:p-3 bg-[#E4DAC2] border border-[#CBB89D] rounded-lg text-center">
+                  <Factory className="w-4 h-4 sm:w-5 sm:h-5 mx-auto text-[#68734B] mb-1" />
+                  <p className="font-serif font-bold text-[11px] sm:text-xs text-[#573B2E]">Manufacturing</p>
                 </div>
-                <div className="p-3 bg-[#E4DAC2] border border-[#CBB89D] rounded-lg text-center">
-                  <Globe2 className="w-5 h-5 mx-auto text-[#68734B] mb-1" />
-                  <p className="font-serif font-bold text-xs text-[#573B2E]">Merchant Export</p>
+                <div className="p-2.5 sm:p-3 bg-[#E4DAC2] border border-[#CBB89D] rounded-lg text-center">
+                  <Globe2 className="w-4 h-4 sm:w-5 sm:h-5 mx-auto text-[#68734B] mb-1" />
+                  <p className="font-serif font-bold text-[11px] sm:text-xs text-[#573B2E] leading-tight">Merchant Export</p>
                 </div>
               </div>
             </div>
@@ -94,18 +94,18 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
       <AboutProductShowcase onOrderNow={(product) => onRequestQuote(product)} />
 
       {/* 4. VISUAL STORY GALLERY (Soft Ivory Background) */}
-      <section className="py-20 bg-[#E4DAC2] border-b border-[#CBB89D]/40">
+      <section className="py-12 sm:py-16 md:py-20 bg-[#E4DAC2] border-b border-[#CBB89D]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 space-y-2">
             <span className="text-xs font-semibold uppercase tracking-widest text-[#68734B]">
               Visual Gallery
             </span>
-            <h2 className="font-serif text-3xl font-bold text-[#573B2E]">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#573B2E]">
               Farms, Extraction &amp; Export Supplies
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm group">
               <div className="aspect-[4/3] overflow-hidden">
                 <img

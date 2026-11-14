@@ -43,9 +43,9 @@ export const ProductPage: React.FC<ProductPageProps> = ({
   return (
     <div className="bg-[#EDE1D2] text-[#412F26]">
       {/* 1. Header Banner (Olive Green) */}
-      <section className="bg-[#68734B] text-[#EDE1D2] py-20 border-b border-[#573B2E]/20">
+      <section className="bg-[#68734B] text-[#EDE1D2] py-12 sm:py-16 md:py-20 border-b border-[#573B2E]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-4">
+          <div className="max-w-3xl space-y-3 sm:space-y-4">
             <span className="text-xs font-semibold uppercase tracking-widest text-[#E4DAC2]">
               B2B Product Catalogue
             </span>
@@ -60,22 +60,22 @@ export const ProductPage: React.FC<ProductPageProps> = ({
       </section>
 
       {/* 2. Category Filter & Action Bar */}
-      <section className="sticky top-20 z-30 bg-[#EDE1D2]/95 backdrop-blur-md border-b border-[#CBB89D]/60 py-4 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <section className="md:sticky md:top-20 z-30 bg-[#EDE1D2]/95 backdrop-blur-md border-b border-[#CBB89D]/60 py-4 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 sm:gap-4">
           {/* Category Tabs */}
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-2">
             {[
               { id: 'all', label: 'All Products (8)' },
-              { id: 'coconut-oil', label: 'Coconut Oil (Manufacturing)' },
-              { id: 'cocopeat', label: 'Cocopeat (Merchant Export)' },
-              { id: 'coir', label: 'Coir Products (Merchant Export)' },
+              { id: 'coconut-oil', label: 'Coconut Oil (Mfg)' },
+              { id: 'cocopeat', label: 'Cocopeat (Export)' },
+              { id: 'coir', label: 'Coir (Export)' },
             ].map((tab) => {
               const isActive = activeCategory === tab.id;
               return (
                 <button
                   key={tab.id}
                   onClick={() => setActiveCategory(tab.id as any)}
-                  className={`px-3.5 py-1.5 rounded-md text-xs font-semibold transition-colors ${
+                  className={`px-3 py-2 sm:py-1.5 rounded-md text-xs font-semibold transition-colors text-center ${
                     isActive
                       ? 'bg-[#68734B] text-[#EDE1D2] shadow-sm'
                       : 'bg-[#E4DAC2] text-[#573B2E] hover:bg-[#CBB89D]'
@@ -88,7 +88,7 @@ export const ProductPage: React.FC<ProductPageProps> = ({
           </div>
 
           {/* Quick Catalogue Action */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-between sm:justify-end gap-3 pt-1 md:pt-0">
             <button
               onClick={() => onOpenCatalogue('specs')}
               className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#573B2E] hover:text-[#68734B] transition-colors"
@@ -231,16 +231,16 @@ export const ProductPage: React.FC<ProductPageProps> = ({
       <GlobalSourcingRibbon />
 
       {/* 5. Export Container Loadability Guide (Soft Ivory Background) */}
-      <section className="py-16 bg-[#E4DAC2] border-t border-[#CBB89D]/40">
+      <section className="py-12 sm:py-16 bg-[#E4DAC2] border-t border-[#CBB89D]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#EDE1D2] border border-[#CBB89D] rounded-xl p-8 shadow-sm">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
+          <div className="bg-[#EDE1D2] border border-[#CBB89D] rounded-xl p-5 sm:p-8 shadow-sm">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6 mb-6">
               <div className="space-y-1">
                 <div className="flex items-center gap-2 text-xs font-bold text-[#68734B] uppercase tracking-wider">
-                  <Container className="w-4 h-4" />
+                  <Container className="w-4 h-4 shrink-0" />
                   International Logistics Reference
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-[#573B2E]">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#573B2E]">
                   Export Container Loadability &amp; Packing Guide
                 </h3>
                 <p className="text-xs text-[#806044]">
@@ -249,7 +249,7 @@ export const ProductPage: React.FC<ProductPageProps> = ({
               </div>
 
               {/* Selector */}
-              <div className="flex gap-2 text-xs">
+              <div className="flex flex-wrap gap-2 text-xs">
                 <button
                   onClick={() => setContainerProduct('cocopeat-5kg')}
                   className={`px-3 py-1.5 rounded transition-colors font-medium ${

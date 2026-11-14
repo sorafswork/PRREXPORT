@@ -34,7 +34,7 @@ export default function App() {
 
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerOffset = 80;
+      const headerOffset = window.innerWidth < 768 ? 98 : 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -87,7 +87,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#EDE1D2] text-[#412F26] relative selection:bg-[#68734B]/30 selection:text-[#573B2E]">
+    <div className="min-h-screen flex flex-col bg-[#EDE1D2] text-[#412F26] relative overflow-x-clip selection:bg-[#68734B]/30 selection:text-[#573B2E]">
       {/* Sticky Header with Active Section Spy */}
       <Header
         currentPage={activeSection}
@@ -97,13 +97,13 @@ export default function App() {
 
       {/* Unified Single-Page Continuous Scrolling Layout */}
       <main className="flex-1">
-        {/* Section 1: Home (Cinematic Hero + Short Company Introduction) */}
-        <section id="home" className="scroll-mt-20">
+        {/* Section 1: Home (Cinematic Video Hero) */}
+        <section id="home" className="scroll-mt-[98px] md:scroll-mt-20">
           <HomePage onNavigate={handleScrollToSection} />
         </section>
 
         {/* Section 2: About (Farming Heritage, Storytelling & Animated Product Showcase) */}
-        <section id="about" className="scroll-mt-20">
+        <section id="about" className="scroll-mt-[98px] md:scroll-mt-20">
           <AboutPage
             onNavigate={handleScrollToSection}
             onRequestQuote={(product) => handleOpenQuoteModal(product)}
@@ -111,7 +111,7 @@ export default function App() {
         </section>
 
         {/* Section 3: Products (Full B2B Catalogue, Moving Ribbon & Container Calculator) */}
-        <section id="product" className="scroll-mt-20">
+        <section id="product" className="scroll-mt-[98px] md:scroll-mt-20">
           <ProductPage
             onSelectProduct={handleOpenDetailModal}
             onRequestQuote={handleOpenQuoteModal}
@@ -120,7 +120,7 @@ export default function App() {
         </section>
 
         {/* Section 4: Contact (Export Desk, Direct Calls, WhatsApp & B2B Enquiry Form) */}
-        <section id="contact" className="scroll-mt-20">
+        <section id="contact" className="scroll-mt-[98px] md:scroll-mt-20">
           <ContactPage />
         </section>
       </main>

@@ -92,9 +92,9 @@ export const ContactPage: React.FC = () => {
   return (
     <div className="bg-[#EDE1D2] text-[#412F26]">
       {/* 1. Header Banner (Olive Green) */}
-      <section className="bg-[#68734B] text-[#EDE1D2] py-20 border-b border-[#573B2E]/20">
+      <section className="bg-[#68734B] text-[#EDE1D2] py-12 sm:py-16 md:py-20 border-b border-[#573B2E]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-4">
+          <div className="max-w-3xl space-y-3 sm:space-y-4">
             <span className="text-xs font-semibold uppercase tracking-widest text-[#E4DAC2]">
               Direct B2B Communication
             </span>
@@ -109,9 +109,9 @@ export const ContactPage: React.FC = () => {
       </section>
 
       {/* 2. Main Contact Grid */}
-      <section className="py-20 border-b border-[#CBB89D]/40">
+      <section className="py-12 sm:py-16 md:py-20 border-b border-[#CBB89D]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             {/* Left Column: Official Contact Info & Map */}
             <div className="lg:col-span-5 space-y-8">
               <div className="space-y-4">
@@ -144,18 +144,18 @@ export const ContactPage: React.FC = () => {
                 </div>
 
                 {/* Phone */}
-                <div className="p-4 bg-white border border-[#CBB89D] rounded-xl flex items-center justify-between shadow-sm">
-                  <div className="flex items-center gap-3.5">
+                <div className="p-4 bg-white border border-[#CBB89D] rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-sm">
+                  <div className="flex items-center gap-3.5 min-w-0">
                     <div className="w-9 h-9 rounded-lg bg-[#573B2E]/15 text-[#573B2E] flex items-center justify-center shrink-0">
                       <Phone className="w-5 h-5" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <h3 className="font-bold text-[#573B2E] text-xs uppercase tracking-wider mb-0.5">
                         Direct Phone
                       </h3>
                       <a
                         href={`tel:${COMPANY_INFO.phone}`}
-                        className="font-mono text-[#412F26] hover:text-[#68734B] font-semibold text-sm transition-colors"
+                        className="font-mono text-[#412F26] hover:text-[#68734B] font-semibold text-sm transition-colors break-all"
                       >
                         {COMPANY_INFO.phoneDisplay}
                       </a>
@@ -163,25 +163,25 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <a
                     href={`tel:${COMPANY_INFO.phone}`}
-                    className="px-3 py-1.5 bg-[#EDE1D2] hover:bg-[#E4DAC2] text-[#573B2E] text-xs font-semibold rounded border border-[#CBB89D] transition-colors"
+                    className="px-3 py-1.5 bg-[#EDE1D2] hover:bg-[#E4DAC2] text-[#573B2E] text-xs font-semibold rounded border border-[#CBB89D] transition-colors shrink-0"
                   >
                     Call Now
                   </a>
                 </div>
 
                 {/* Email */}
-                <div className="p-4 bg-white border border-[#CBB89D] rounded-xl flex items-center justify-between shadow-sm">
-                  <div className="flex items-center gap-3.5">
+                <div className="p-4 bg-white border border-[#CBB89D] rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-sm">
+                  <div className="flex items-center gap-3.5 min-w-0">
                     <div className="w-9 h-9 rounded-lg bg-[#806044]/15 text-[#806044] flex items-center justify-center shrink-0">
                       <Mail className="w-5 h-5" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <h3 className="font-bold text-[#573B2E] text-xs uppercase tracking-wider mb-0.5">
                         Official Email
                       </h3>
                       <a
                         href={`mailto:${COMPANY_INFO.email}`}
-                        className="font-mono text-[#412F26] hover:text-[#68734B] font-semibold text-sm transition-colors"
+                        className="font-mono text-[#412F26] hover:text-[#68734B] font-semibold text-sm transition-colors break-all"
                       >
                         {COMPANY_INFO.email}
                       </a>
@@ -189,19 +189,19 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <a
                     href={`mailto:${COMPANY_INFO.email}`}
-                    className="px-3 py-1.5 bg-[#EDE1D2] hover:bg-[#E4DAC2] text-[#573B2E] text-xs font-semibold rounded border border-[#CBB89D] transition-colors"
+                    className="px-3 py-1.5 bg-[#EDE1D2] hover:bg-[#E4DAC2] text-[#573B2E] text-xs font-semibold rounded border border-[#CBB89D] transition-colors shrink-0"
                   >
                     Send Email
                   </a>
                 </div>
 
                 {/* WhatsApp */}
-                <div className="p-4 bg-[#25D366]/10 border border-[#25D366]/30 rounded-xl flex items-center justify-between shadow-sm">
-                  <div className="flex items-center gap-3.5">
+                <div className="p-4 bg-[#25D366]/10 border border-[#25D366]/30 rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-sm">
+                  <div className="flex items-center gap-3.5 min-w-0">
                     <div className="w-9 h-9 rounded-lg bg-[#25D366] text-white flex items-center justify-center shrink-0">
                       <MessageCircle className="w-5 h-5" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <h3 className="font-bold text-[#412F26] text-xs uppercase tracking-wider mb-0.5">
                         WhatsApp Export Liaison
                       </h3>
@@ -212,7 +212,7 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <button
                     onClick={handleDirectWhatsApp}
-                    className="px-3.5 py-1.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-semibold rounded shadow-sm transition-colors"
+                    className="px-3.5 py-1.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-semibold rounded shadow-sm transition-colors shrink-0"
                   >
                     Chat
                   </button>
