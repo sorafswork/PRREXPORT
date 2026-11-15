@@ -99,6 +99,13 @@ export const ContactPage: React.FC = () => {
     window.open(`https://wa.me/${COMPANY_INFO.whatsapp}?text=${encoded}`, '_blank', 'noopener,noreferrer');
   };
 
+  const handleWhatsAppChat = () => {
+    const text = encodeURIComponent(
+      'Hello P R GNANARAJA EXPORT, I would like to enquire about your coconut products, coconut oil, cocopeat or coir products.'
+    );
+    window.open(`https://wa.me/${COMPANY_INFO.whatsapp}?text=${text}`, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="bg-[#EDE1D2] text-[#412F26]">
       {/* 1. Header Banner (Olive Green) */}
@@ -206,7 +213,7 @@ export const ContactPage: React.FC = () => {
                     </div>
                   </div>
                   <button
-                    onClick={handleDirectWhatsApp}
+                    onClick={handleWhatsAppChat}
                     className="px-3.5 py-1.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-semibold rounded shadow-sm transition-colors shrink-0"
                   >
                     Chat

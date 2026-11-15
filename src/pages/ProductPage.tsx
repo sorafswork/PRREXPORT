@@ -118,20 +118,20 @@ export const ProductPage: React.FC<ProductPageProps> = ({
               >
                 <div>
                   {/* Top Split: Image + Essential Meta */}
-                  <div className="grid grid-cols-1 sm:grid-cols-12 gap-0 border-b border-[#CBB89D]/40">
-                    <div className="sm:col-span-5 relative bg-[#E4DAC2] aspect-[4/3] sm:aspect-auto overflow-hidden">
+                  <div className="grid grid-cols-1 sm:grid-cols-12 sm:items-center gap-0 border-b border-[#CBB89D]/40 bg-[#E4DAC2]/20">
+                    <div className="sm:col-span-5 relative bg-[#E4DAC2] aspect-[4/3] overflow-hidden">
                       <img
                         src={product.image}
                         alt={product.name}
                         referrerPolicy="no-referrer"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-center"
                       />
                       <div className="absolute top-2 left-2 text-[10px] font-bold px-2 py-0.5 rounded bg-[#68734B] text-[#EDE1D2]">
                         {product.businessType}
                       </div>
                     </div>
 
-                    <div className="sm:col-span-7 p-6 space-y-2 flex flex-col justify-center">
+                    <div className="sm:col-span-7 p-5 sm:p-6 space-y-2 flex flex-col justify-center bg-white h-full">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-[#68734B]">
                         {product.categoryName}
                       </span>

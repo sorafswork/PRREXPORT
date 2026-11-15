@@ -38,7 +38,7 @@ export const GlobalSourcingRibbon: React.FC = () => {
               href={platform.url}
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-4 px-6 py-3.5 bg-[#573B2E]/90 hover:bg-[#573B2E] border border-[#EDE1D2]/20 rounded-xl transition-all shadow-md shrink-0 hover:scale-[1.02] text-left"
+              className="inline-flex items-center gap-4 px-6 py-3.5 bg-[#573B2E]/90 hover:bg-[#573B2E] border border-[#EDE1D2]/20 rounded-xl transition-colors shadow-md shrink-0 text-left"
               title={`Visit ${platform.name} official site`}
             >
               <div className="w-9 h-9 rounded-lg bg-[#EDE1D2] text-[#412F26] flex items-center justify-center font-serif font-bold text-sm shrink-0">

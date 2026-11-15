@@ -14,8 +14,26 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({
 }) => {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [videoError, setVideoError] = useState(false);
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== 'undefined' ? window.matchMedia('(max-width: 767px)').matches : false
+  );
 
-  const videoSource = './videos/coconut-journey.mp4';
+  React.useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(max-width: 767px)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsMobile(e.matches);
+      setVideoLoaded(false);
+      setVideoError(false);
+    };
+    setIsMobile(mq.matches);
+    mq.addEventListener('change', handleChange);
+    return () => mq.removeEventListener('change', handleChange);
+  }, []);
+
+  const videoSource = isMobile
+    ? './videos/coconut-journey-mobile.mp4'
+    : './videos/coconut-journey.mp4';
   const fallbackPoster = './assets/aistudio/c7_001838b2.jpeg';
 
   const handleScrollDown = () => {
@@ -34,6 +52,7 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({
       {/* 1. Continuous AI-Generated Coconut Journey Background Video */}
       {!videoError && (
         <video
+          key={videoSource}
           autoPlay
           muted
           loop

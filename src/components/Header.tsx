@@ -54,7 +54,7 @@ export const Header: React.FC<HeaderProps> = ({
           aria-label="P R GNANARAJA EXPORT Homepage"
         >
           {/* Official Brand Logo Icon */}
-          <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg overflow-hidden bg-white border border-[#CBB89D]/60 flex items-center justify-center p-0.5 shadow-sm shrink-0 group-hover:scale-105 transition-transform">
+          <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg overflow-hidden bg-white border border-[#CBB89D]/60 flex items-center justify-center p-0.5 shadow-sm shrink-0">
             <img
               src={prrIconImg}
               alt="P R GNANARAJA Emblem"

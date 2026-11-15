@@ -39,7 +39,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
                 <img
                   src="./assets/edited/coconut-harvest-grove.jpg"
                   alt="Harvested coconuts and coconut groves"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#412F26]/70 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-4 left-4 text-[#EDE1D2]">
@@ -100,57 +100,57 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
-            <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm group">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src="./assets/edited/cocopeat-drying-field.jpg"
-                  alt="Cocopeat Drying Field"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-3.5 text-center">
-                <h4 className="font-serif text-xs font-bold text-[#573B2E]">Cocopeat Drying</h4>
-                <p className="text-[11px] text-[#806044]">Low EC &lt; 0.5 Processing</p>
-              </div>
-            </div>
-
-            <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm group">
+            <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src="./assets/edited/coconut-groves.jpg"
                   alt="Coconut Palm Groves"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
-              <div className="p-3.5 text-center">
+              <div className="p-3 sm:p-3.5 text-center">
                 <h4 className="font-serif text-xs font-bold text-[#573B2E]">Coconut Groves</h4>
                 <p className="text-[11px] text-[#806044]">Direct Producer Source</p>
               </div>
             </div>
 
-            <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm group">
+            <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src="./assets/edited/copra-drying.jpg"
                   alt="Sun-Dried Coconut Copra"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
-              <div className="p-3.5 text-center">
+              <div className="p-3 sm:p-3.5 text-center">
                 <h4 className="font-serif text-xs font-bold text-[#573B2E]">Sun-Dried Copra</h4>
                 <p className="text-[11px] text-[#806044]">Pure Oil Preparation</p>
               </div>
             </div>
 
-            <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm group">
+            <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src="./assets/edited/cocopeat-drying-field.jpg"
+                  alt="Cocopeat Drying Field"
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="p-3 sm:p-3.5 text-center">
+                <h4 className="font-serif text-xs font-bold text-[#573B2E]">Cocopeat Drying</h4>
+                <p className="text-[11px] text-[#806044]">Low EC &lt; 0.5 Processing</p>
+              </div>
+            </div>
+
+            <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src="./assets/edited/export-cartons.jpg"
                   alt="Export Dispatch Carton Packing"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
-              <div className="p-3.5 text-center">
+              <div className="p-3 sm:p-3.5 text-center">
                 <h4 className="font-serif text-xs font-bold text-[#573B2E]">Global Dispatch Packing</h4>
                 <p className="text-[11px] text-[#806044]">Standard Export Cartons</p>
               </div>
