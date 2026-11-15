@@ -21,7 +21,7 @@ export const GlobalSourcingRibbon: React.FC = () => {
           Global Sourcing Channels
         </h2>
         <p className="text-xs sm:text-sm text-[#E4DAC2]/80 max-w-xl mx-auto">
-          Connecting buyers through leading business platforms.
+          Connecting businesses through leading digital platforms.
         </p>
       </div>
 

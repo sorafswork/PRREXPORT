@@ -50,10 +50,10 @@ export const ProductPage: React.FC<ProductPageProps> = ({
               B2B Product Catalogue
             </span>
             <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#EDE1D2] leading-tight">
-              Export-Grade Coconut Oils, Cocopeat &amp; Coir Products
+              Global Standard Coconut Oils, Cocopeat &amp; Coir Products
             </h1>
             <p className="text-sm sm:text-base text-[#EDE1D2]/90 leading-relaxed">
-              Explore our confirmed product specifications, standard packaging, and container capacities. Direct manufacturing of pure oils and merchant export supply of premium horticultural coir solutions.
+              Explore our confirmed product specifications, standard packaging, and container capacities. Direct manufacturing of pure oils and reliable export supply of natural horticultural coir and coconut shell solutions.
             </p>
           </div>
         </div>
@@ -65,10 +65,11 @@ export const ProductPage: React.FC<ProductPageProps> = ({
           {/* Category Tabs */}
           <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-2">
             {[
-              { id: 'all', label: 'All Products (8)' },
+              { id: 'all', label: `All Products (${PRODUCTS.length})` },
               { id: 'coconut-oil', label: 'Coconut Oil (Mfg)' },
               { id: 'cocopeat', label: 'Cocopeat (Export)' },
               { id: 'coir', label: 'Coir (Export)' },
+              { id: 'coconut-shell', label: 'Coconut Shell (Export)' },
             ].map((tab) => {
               const isActive = activeCategory === tab.id;
               return (
@@ -150,12 +151,8 @@ export const ProductPage: React.FC<ProductPageProps> = ({
                     </div>
                   </div>
 
-                  {/* Middle: Description & Features */}
+                  {/* Middle: Key Highlights & Available Sizes */}
                   <div className="p-6 space-y-4">
-                    <p className="text-xs text-[#412F26] leading-relaxed">
-                      {product.description}
-                    </p>
-
                     {/* Features list */}
                     <div className="space-y-1.5">
                       <p className="text-[11px] font-bold uppercase tracking-wider text-[#573B2E]">
@@ -169,21 +166,6 @@ export const ProductPage: React.FC<ProductPageProps> = ({
                           </li>
                         ))}
                       </ul>
-                    </div>
-
-                    {/* Specification Table Snippet */}
-                    <div className="p-3 bg-[#EDE1D2]/50 border border-[#CBB89D]/50 rounded-lg text-xs space-y-1.5">
-                      <p className="font-bold text-[#573B2E] text-[11px] uppercase tracking-wider">
-                        Technical Specifications:
-                      </p>
-                      <div className="grid grid-cols-2 gap-2 text-[11px]">
-                        {product.specs.slice(0, 4).map((spec, i) => (
-                          <div key={i}>
-                            <span className="text-[#806044]">{spec.label}: </span>
-                            <span className="font-medium text-[#412F26]">{spec.value}</span>
-                          </div>
-                        ))}
-                      </div>
                     </div>
 
                     {/* Available Sizes */}
@@ -244,7 +226,7 @@ export const ProductPage: React.FC<ProductPageProps> = ({
                   Export Container Loadability &amp; Packing Guide
                 </h3>
                 <p className="text-xs text-[#806044]">
-                  Standard maritime export capacity estimates from Tamil Nadu ports (Tuticorin / Chennai).
+                  Standard maritime export capacity estimates for international container shipments.
                 </p>
               </div>
 
@@ -343,9 +325,9 @@ export const ProductPage: React.FC<ProductPageProps> = ({
                       <p className="text-[11px] text-[#412F26] mt-0.5">Packed flat in corrugated export cartons</p>
                     </div>
                     <div className="p-3 bg-[#EDE1D2]/40 rounded border border-[#CBB89D]/50">
-                      <span className="text-[#806044] block">Coir Scrubbers</span>
-                      <p className="font-mono text-base font-bold text-[#68734B] mt-1">Bulk Retail Bundles</p>
-                      <p className="text-[11px] text-[#412F26] mt-0.5">Custom cardboard sleeves with buyer barcode</p>
+                      <span className="text-[#806044] block">Coir Scrubber Pads</span>
+                      <p className="font-mono text-base font-bold text-[#68734B] mt-1">Ready-to-Use Bundles</p>
+                      <p className="text-[11px] text-[#412F26] mt-0.5">Packed cleanly with buyer barcode or carton box</p>
                     </div>
                   </div>
                 </div>

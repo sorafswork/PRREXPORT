@@ -38,7 +38,10 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
 
   if (!isOpen) return null;
 
-  const currentProduct = PRODUCTS.find((p) => p.id === selectedProductId) || PRODUCTS[0];
+  const currentProduct =
+    selectedProductId === 'others'
+      ? { name: 'Others', sizes: ['Custom Sizes / Specifications'] }
+      : PRODUCTS.find((p) => p.id === selectedProductId) || PRODUCTS[0];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -200,20 +203,28 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                       </option>
                     ))}
                   </optgroup>
-                  <optgroup label="Cocopeat Products (Merchant Export)">
+                  <optgroup label="Cocopeat Products (Export)">
                     {PRODUCTS.filter((p) => p.category === 'cocopeat').map((p) => (
                       <option key={p.id} value={p.id}>
                         {p.name} ({p.businessType})
                       </option>
                     ))}
                   </optgroup>
-                  <optgroup label="Coir Products (Merchant Export)">
+                  <optgroup label="Coir Products (Export)">
                     {PRODUCTS.filter((p) => p.category === 'coir').map((p) => (
                       <option key={p.id} value={p.id}>
                         {p.name} ({p.businessType})
                       </option>
                     ))}
                   </optgroup>
+                  <optgroup label="Coconut Shell Products (Export)">
+                    {PRODUCTS.filter((p) => p.category === 'coconut-shell').map((p) => (
+                      <option key={p.id} value={p.id}>
+                        {p.name} ({p.businessType})
+                      </option>
+                    ))}
+                  </optgroup>
+                  <option value="others">Others</option>
                 </select>
               </div>
 

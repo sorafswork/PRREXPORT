@@ -2,13 +2,7 @@ import React from 'react';
 import { COMPANY_INFO } from '../data/company';
 import { Product } from '../types';
 import { AboutProductShowcase } from '../components/AboutProductShowcase';
-import { Sprout, Factory, Globe2, MapPin, ArrowUpRight } from 'lucide-react';
-import {
-  heroCoconutGroveImg,
-  coconutOilBottlesImg,
-  cocopeatBlocksImg,
-  coirEcoProductsImg,
-} from '../assets/images';
+import { Sprout, Factory, Globe2, ArrowUpRight } from 'lucide-react';
 
 interface AboutPageProps {
   onNavigate: (page: 'home' | 'about' | 'product' | 'contact') => void;
@@ -26,10 +20,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
               About P R GNANARAJA EXPORT
             </span>
             <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#EDE1D2] leading-tight">
-              Our Farming Heritage &amp; Export Commitment
+              Our Producer Heritage &amp; Export Commitment
             </h1>
             <p className="text-sm sm:text-base text-[#EDE1D2]/90 leading-relaxed max-w-2xl">
-              Based in Thanjavur, Tamil Nadu, we combine coconut farming traditions with small-scale oil manufacturing and dependable merchant export of coir and cocopeat products.
+              We combine our coconut producer heritage with pure oil manufacturing and dependable export of coir and cocopeat products.
             </p>
           </div>
         </div>
@@ -39,18 +33,18 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
       <section className="py-12 sm:py-16 md:py-20 bg-[#EDE1D2] border-b border-[#CBB89D]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Visual Farm Imagery */}
+            {/* Visual Producer Imagery */}
             <div className="lg:col-span-6">
               <div className="relative rounded-2xl overflow-hidden border border-[#CBB89D] shadow-lg bg-white aspect-[4/3] group">
                 <img
-                  src={heroCoconutGroveImg}
-                  alt="Thanjavur coconut groves"
+                  src="./assets/edited/coconut-harvest-grove.jpg"
+                  alt="Harvested coconuts and coconut groves"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#412F26]/70 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-4 left-4 text-[#EDE1D2]">
-                  <p className="font-serif text-lg font-bold">Vadugankuthagai, Thanjavur</p>
-                  <p className="text-xs text-[#CBB89D]">Tamil Nadu, India · Kaveri Delta</p>
+                  <p className="font-serif text-lg font-bold">Direct Coconut Source</p>
+                  <p className="text-xs text-[#CBB89D]">Producer Harvest &amp; Quality Control</p>
                 </div>
               </div>
             </div>
@@ -61,20 +55,20 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
                 Origin &amp; Focus
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#573B2E] leading-snug">
-                Connecting Thanjavur's Farms with International Buyers
+                Connecting Our Source with International Buyers
               </h2>
               <p className="text-sm sm:text-base text-[#412F26] leading-relaxed">
-                P R GNANARAJA EXPORT is situated in Pattukkottai Taluk, Thanjavur District. Our business is anchored on direct agrarian roots: cultivating coconut palms, managing copra drying, and extracting pure unrefined oils on a controlled small scale.
+                P R GNANARAJA EXPORT is anchored in direct producer roots: cultivating coconut palms, managing copra drying, and manufacturing pure unrefined oils with disciplined quality control.
               </p>
               <p className="text-sm text-[#573B2E] leading-relaxed">
-                Through our merchant export division, we source tested, low-EC cocopeat substrates and molded coir products for international horticulture, greenhouses, and commercial distributors.
+                Through our export division, we supply tested, low-EC cocopeat substrates, molded coir, and coconut shell products for international horticulture, greenhouses, and commercial distributors.
               </p>
 
               {/* Three Business Activities Visual Strip */}
               <div className="grid grid-cols-3 gap-2 sm:gap-3 pt-2">
                 <div className="p-2.5 sm:p-3 bg-[#E4DAC2] border border-[#CBB89D] rounded-lg text-center">
                   <Sprout className="w-4 h-4 sm:w-5 sm:h-5 mx-auto text-[#68734B] mb-1" />
-                  <p className="font-serif font-bold text-[11px] sm:text-xs text-[#573B2E]">Farming</p>
+                  <p className="font-serif font-bold text-[11px] sm:text-xs text-[#573B2E]">Producer</p>
                 </div>
                 <div className="p-2.5 sm:p-3 bg-[#E4DAC2] border border-[#CBB89D] rounded-lg text-center">
                   <Factory className="w-4 h-4 sm:w-5 sm:h-5 mx-auto text-[#68734B] mb-1" />
@@ -82,7 +76,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
                 </div>
                 <div className="p-2.5 sm:p-3 bg-[#E4DAC2] border border-[#CBB89D] rounded-lg text-center">
                   <Globe2 className="w-4 h-4 sm:w-5 sm:h-5 mx-auto text-[#68734B] mb-1" />
-                  <p className="font-serif font-bold text-[11px] sm:text-xs text-[#573B2E] leading-tight">Merchant Export</p>
+                  <p className="font-serif font-bold text-[11px] sm:text-xs text-[#573B2E] leading-tight">Export</p>
                 </div>
               </div>
             </div>
@@ -101,7 +95,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
               Visual Gallery
             </span>
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#573B2E]">
-              Farms, Extraction &amp; Export Supplies
+              Producers, Extraction &amp; Export Supplies
             </h2>
           </div>
 
@@ -109,56 +103,56 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
             <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm group">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src={heroCoconutGroveImg}
-                  alt="Coconut Palm Plantation"
+                  src="./assets/edited/cocopeat-drying-field.jpg"
+                  alt="Cocopeat Drying Field"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-3.5 text-center">
+                <h4 className="font-serif text-xs font-bold text-[#573B2E]">Cocopeat Drying</h4>
+                <p className="text-[11px] text-[#806044]">Low EC &lt; 0.5 Processing</p>
+              </div>
+            </div>
+
+            <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm group">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src="./assets/edited/coconut-groves.jpg"
+                  alt="Coconut Palm Groves"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-3.5 text-center">
                 <h4 className="font-serif text-xs font-bold text-[#573B2E]">Coconut Groves</h4>
-                <p className="text-[11px] text-[#806044]">Thanjavur, Tamil Nadu</p>
+                <p className="text-[11px] text-[#806044]">Direct Producer Source</p>
               </div>
             </div>
 
             <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm group">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src={coconutOilBottlesImg}
-                  alt="Coconut Oil Extraction"
+                  src="./assets/edited/copra-drying.jpg"
+                  alt="Sun-Dried Coconut Copra"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-3.5 text-center">
-                <h4 className="font-serif text-xs font-bold text-[#573B2E]">Pure Coconut Oils</h4>
-                <p className="text-[11px] text-[#806044]">Rotary &amp; Fermentation</p>
+                <h4 className="font-serif text-xs font-bold text-[#573B2E]">Sun-Dried Copra</h4>
+                <p className="text-[11px] text-[#806044]">Pure Oil Preparation</p>
               </div>
             </div>
 
             <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm group">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src={cocopeatBlocksImg}
-                  alt="Cocopeat 5kg Blocks"
+                  src="./assets/edited/export-cartons.jpg"
+                  alt="Export Dispatch Carton Packing"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-3.5 text-center">
-                <h4 className="font-serif text-xs font-bold text-[#573B2E]">Cocopeat Blocks</h4>
-                <p className="text-[11px] text-[#806044]">Low EC &lt; 0.5 Substrate</p>
-              </div>
-            </div>
-
-            <div className="bg-[#EDE1D2] rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm group">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={coirEcoProductsImg}
-                  alt="Coir Biodegradable Pots"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-3.5 text-center">
-                <h4 className="font-serif text-xs font-bold text-[#573B2E]">Eco Coir Products</h4>
-                <p className="text-[11px] text-[#806044]">100% Biodegradable</p>
+                <h4 className="font-serif text-xs font-bold text-[#573B2E]">Global Dispatch Packing</h4>
+                <p className="text-[11px] text-[#806044]">Standard Export Cartons</p>
               </div>
             </div>
           </div>
@@ -172,7 +166,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
             Discuss Bulk Enquiries with P R GNANARAJA EXPORT
           </h2>
           <p className="text-xs sm:text-sm text-[#CBB89D] max-w-xl mx-auto">
-            Direct pricing, custom packing specifications, and prompt shipment support from Tamil Nadu, India.
+            Direct pricing, custom packing specifications, and prompt shipment support worldwide.
           </p>
           <div className="pt-2 flex flex-wrap justify-center gap-4">
             <button

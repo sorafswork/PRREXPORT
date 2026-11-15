@@ -10,6 +10,7 @@ import productCocopeat5kgBlocksImg from './images/product_cocopeat_5kg_blocks_17
 import productCocopeat650gBricksImg from './images/product_cocopeat_650g_bricks_1794641045877.jpg';
 import productCoirPotsImg from './images/product_coir_pots_1794641046864.jpg';
 import productCoirScrubbersImg from './images/product_coir_scrubbers_1794641047308.jpg';
+import productCoirMulchMatsImg from './images/product_coir_mulch_mats_1794732714563.jpg';
 import productCoirPvcMatImg from './images/product_coir_pvc_mat_1794641048080.jpg';
 import productSesameOilImg from './images/product_sesame_oil_1794641048277.jpg';
 import productGroundnutOilImg from './images/product_groundnut_oil_1794641048593.jpg';
@@ -30,6 +31,7 @@ export {
   productCocopeat650gBricksImg,
   productCoirPotsImg,
   productCoirScrubbersImg,
+  productCoirMulchMatsImg,
   productCoirPvcMatImg,
   productSesameOilImg,
   productGroundnutOilImg,

@@ -25,8 +25,7 @@ export const CatalogueModal: React.FC<CatalogueModalProps> = ({
     // Generate structured text document representing the export catalogue
     let content = `========================================================================\n`;
     content += `P R GNANARAJA EXPORT\n`;
-    content += `From Our Farms to Global Markets\n`;
-    content += `Business Address: ${COMPANY_INFO.address.full}\n`;
+    content += `From Our Source to Global Markets\n`;
     content += `Phone: ${COMPANY_INFO.phoneDisplay} | Email: ${COMPANY_INFO.email}\n`;
     content += `Website: ${COMPANY_INFO.website}\n`;
     content += `========================================================================\n\n`;
@@ -54,12 +53,11 @@ export const CatalogueModal: React.FC<CatalogueModalProps> = ({
       });
     } else {
       content += `COMPANY PROFILE & EXPORT CREDENTIALS\n\n`;
-      content += `Entity: P R GNANARAJA EXPORT\n`;
-      content += `Location: Vadugankuthagai, Madukkur, Pattukkottai Taluk, Thanjavur District, Tamil Nadu, India\n\n`;
+      content += `Entity: P R GNANARAJA EXPORT\n\n`;
       content += `Core Activities:\n`;
-      content += `1. Coconut Farming: Cultivation of quality coconuts in the fertile Kaveri Delta belt of Thanjavur.\n`;
-      content += `2. Small-Scale Coconut Oil Manufacturing: Production of 100% pure Natural Coconut Oil (rotary extracted) and Virgin Coconut Oil (fermentation extracted).\n`;
-      content += `3. Merchant Exporting: Sourcing and export supply of premium cocopeat (5kg blocks, 650g briquettes, jiffy discs) and coir products (biodegradable pots, scrubbers, PVC backed mats).\n\n`;
+      content += `1. Coconut Producer: Cultivation and sourcing of quality mature coconuts.\n`;
+      content += `2. Coconut Oil Manufacturing: Production of 100% pure Natural Coconut Oil (rotary extracted) and Virgin Coconut Oil (fermentation extracted).\n`;
+      content += `3. Global Exporting: Supply of premium cocopeat (5kg blocks, 650g bricks, jiffy discs), coir products (biodegradable pots, mulch mats, scrubber pads, PVC backed mats), and coconut shell dessert cups.\n\n`;
       content += `Future Expansion: Sesame Oil & Groundnut Oil manufacturing planned for next year.\n`;
     }
 
@@ -154,7 +152,7 @@ export const CatalogueModal: React.FC<CatalogueModalProps> = ({
               </div>
               <div className="space-y-3">
                 <p className="text-xs text-[#806044]">
-                  We present our confirmed product portfolio across two distinct operating verticals: Small-scale Coconut Oil Manufacturing and Merchant Exporting.
+                  We present our confirmed product portfolio across two distinct operating verticals: Coconut Oil Manufacturing and Global Exporting.
                 </p>
                 <div className="space-y-2">
                   <div className="p-2.5 bg-[#EDE1D2]/50 rounded border border-[#CBB89D]/50">
@@ -166,23 +164,27 @@ export const CatalogueModal: React.FC<CatalogueModalProps> = ({
                     </p>
                   </div>
                   <div className="p-2.5 bg-[#EDE1D2]/50 rounded border border-[#CBB89D]/50">
-                    <p className="font-semibold text-[#573B2E] text-xs">B. Cocopeat Products (Merchant Export)</p>
+                    <p className="font-semibold text-[#573B2E] text-xs">B. Cocopeat Products (Export)</p>
                     <p className="text-[11px] text-[#412F26]">
                       1. Cocopeat Disc / Jiffy Plugs (25–100mm, EC &lt; 0.5, pH 5.6–6.6)
                       <br />
                       2. Cocopeat 5 kg Blocks (17–19 L/kg expansion, EC &lt; 0.5, Low impurities)
                       <br />
-                      3. Cocopeat 650 gram Bricks (8L expansion, 20x10x5cm)
+                      3. Cocopeat 650 gram Bricks (8L expansion, 20x10x5cm, Ready to Use)
                     </p>
                   </div>
                   <div className="p-2.5 bg-[#EDE1D2]/50 rounded border border-[#CBB89D]/50">
-                    <p className="font-semibold text-[#573B2E] text-xs">C. Coir Products (Merchant Export)</p>
+                    <p className="font-semibold text-[#573B2E] text-xs">C. Coir &amp; Coconut Shell Products (Export)</p>
                     <p className="text-[11px] text-[#412F26]">
                       1. Coir Pots (Circular, 3, 4, 6 and 10 inches, 100% biodegradable)
                       <br />
-                      2. Coir Scrubbers (4x3 in & 6x4 in, 6mm, non-scratch, eco-friendly)
+                      2. Coir Mulch Mats (Circular, 10–12 mm, 1200 GSM, 4" to 48" inches)
                       <br />
-                      3. Coir PVC Backed Mats (40x60, 45x75, 60x90 cm, rubber backing)
+                      3. Coir Scrubber Pads (4x3 in & 6x4 in, 6mm, stitched & unstitched)
+                      <br />
+                      4. Coir PVC Backed Mats (40x60, 45x75, 60x90 cm, rubber backing)
+                      <br />
+                      5. Coconut Shell Dessert Cups (200 ml, Polished, Biodegradable)
                     </p>
                   </div>
                 </div>
@@ -239,14 +241,13 @@ export const CatalogueModal: React.FC<CatalogueModalProps> = ({
                 </h3>
               </div>
               <p className="text-xs text-[#412F26] leading-relaxed">
-                P R GNANARAJA EXPORT is situated in Vadugankuthagai, Madukkur Post, Pattukkottai Taluk, Thanjavur District, Tamil Nadu, India.
+                P R GNANARAJA EXPORT is an integrated coconut producer, pure oil manufacturer, and international supplier of natural coconut-based products.
               </p>
               <p className="text-xs text-[#412F26] leading-relaxed">
-                Positioned in Tamil Nadu’s agricultural heartland, the company combines direct coconut farming heritage with small-scale coconut oil manufacturing and merchant export capabilities for coir and cocopeat products.
+                The company combines direct coconut producer heritage with pure coconut oil manufacturing and reliable export capabilities for coir, cocopeat, and coconut shell products.
               </p>
               <div className="p-3 bg-[#E4DAC2]/50 rounded text-xs text-[#573B2E] space-y-1">
-                <p className="font-semibold">Registered Contact Details:</p>
-                <p>Address: {COMPANY_INFO.address.full}</p>
+                <p className="font-semibold">Official Contact Details:</p>
                 <p>Phone: {COMPANY_INFO.phoneDisplay} | Email: {COMPANY_INFO.email}</p>
               </div>
             </div>

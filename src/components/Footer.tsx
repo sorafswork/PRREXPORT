@@ -1,7 +1,7 @@
 import React from 'react';
 import { COMPANY_INFO } from '../data/company';
 import { prrIconImg } from '../assets/images';
-import { MapPin, Phone, Mail, MessageCircle, ExternalLink, Globe } from 'lucide-react';
+import { Phone, Mail, MessageCircle, ExternalLink, Globe } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (page: 'home' | 'about' | 'product' | 'contact') => void;
@@ -33,7 +33,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestQuote }) =>
               </h3>
             </div>
             <p className="text-sm text-[#CBB89D] leading-relaxed">
-              Rooted in coconut farming in Thanjavur, Tamil Nadu. Small-scale manufacturing of pure Natural & Virgin Coconut Oil and merchant export solutions for high-grade cocopeat and coir products worldwide.
+              Rooted as a coconut producer. Pure Natural &amp; Virgin Coconut Oil manufacturing and export solutions for global-standard cocopeat, coir, and coconut shell products worldwide.
             </p>
             <div className="pt-2">
               <button
@@ -124,16 +124,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestQuote }) =>
             </div>
           </div>
 
-          {/* Column 3: Contact Details & Address */}
+          {/* Column 3: Direct Contact Details */}
           <div className="space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#CBB89D]">
-              Contact & Address
+              Direct Contact
             </h4>
             <div className="space-y-3 text-sm text-[#CBB89D]">
-              <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#CBB89D] shrink-0 mt-0.5" />
-                <span className="leading-snug">{COMPANY_INFO.address.full}</span>
-              </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#CBB89D] shrink-0" />
                 <a
@@ -239,11 +235,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestQuote }) =>
             &copy; {currentYear} <span className="text-[#EDE1D2] font-semibold">{COMPANY_INFO.name}</span>. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-[11px] text-[#CBB89D]/80">
-            <span>Thanjavur, Tamil Nadu, India</span>
+            <span>Agricultural &amp; Coir Exporter</span>
             <span>·</span>
-            <span>Agricultural Merchant Exporter</span>
-            <span>·</span>
-            <span>Small-Scale Coconut Oil Manufacturer</span>
+            <span>Coconut Producer &amp; Oil Manufacturer</span>
           </div>
         </div>
       </div>

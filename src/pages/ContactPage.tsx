@@ -2,16 +2,12 @@ import React, { useState } from 'react';
 import { COMPANY_INFO } from '../data/company';
 import { PRODUCTS } from '../data/products';
 import {
-  MapPin,
   Phone,
   Mail,
   MessageCircle,
   ExternalLink,
   Send,
   CheckCircle,
-  Clock,
-  Globe2,
-  Building2,
   AlertCircle
 } from 'lucide-react';
 
@@ -29,6 +25,22 @@ export const ContactPage: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [refNumber, setRefNumber] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+
+  const buildWhatsAppMessage = (ref?: string) => {
+    const lines = [
+      `*New Business Enquiry - ${COMPANY_INFO.name}*`,
+      ref ? `Enquiry ID: ${ref}` : null,
+      `Full Name: ${fullName || 'Buyer'}`,
+      `Company Name: ${companyName || 'Not specified'}`,
+      `Email Address: ${email || 'Not specified'}`,
+      `Phone / WhatsApp: ${phone || 'Not specified'}`,
+      `Buyer Country / Port: ${country || 'International'}`,
+      `Product Interested In: ${product}`,
+      `Required Quantity: ${quantity || 'Not specified'}`,
+      `Message & Requirements: ${message || 'Not specified'}`,
+    ].filter(Boolean);
+    return encodeURIComponent(lines.join('\n'));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,10 +75,12 @@ export const ContactPage: React.FC = () => {
       // quota fallback
     }
 
-    setTimeout(() => {
-      setSubmitting(false);
-      setSubmitted(true);
-    }, 400);
+    // Open WhatsApp directly with all filled enquiry details
+    const encoded = buildWhatsAppMessage(ref);
+    window.open(`https://wa.me/${COMPANY_INFO.whatsapp}?text=${encoded}`, '_blank', 'noopener,noreferrer');
+
+    setSubmitting(false);
+    setSubmitted(true);
   };
 
   const handleResetForm = () => {
@@ -81,12 +95,8 @@ export const ContactPage: React.FC = () => {
   };
 
   const handleDirectWhatsApp = () => {
-    const text = encodeURIComponent(
-      `Hello P R GNANARAJA EXPORT, I am contacting you from ${country || 'International'} regarding ${product}.\n` +
-      `Name: ${fullName || 'Buyer'}\n` +
-      `Company: ${companyName || 'Trade Buyer'}`
-    );
-    window.open(`https://wa.me/${COMPANY_INFO.whatsapp}?text=${text}`, '_blank');
+    const encoded = buildWhatsAppMessage(refNumber || undefined);
+    window.open(`https://wa.me/${COMPANY_INFO.whatsapp}?text=${encoded}`, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -128,21 +138,6 @@ export const ContactPage: React.FC = () => {
 
               {/* Verified Contact Cards */}
               <div className="space-y-4 text-xs sm:text-sm">
-                {/* Address */}
-                <div className="p-4 bg-white border border-[#CBB89D] rounded-xl flex items-start gap-3.5 shadow-sm">
-                  <div className="w-9 h-9 rounded-lg bg-[#68734B]/15 text-[#68734B] flex items-center justify-center shrink-0 mt-0.5">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-[#573B2E] text-xs uppercase tracking-wider mb-1">
-                      Business &amp; Farm Office Address
-                    </h3>
-                    <p className="text-[#412F26] leading-relaxed font-sans">
-                      {COMPANY_INFO.address.full}
-                    </p>
-                  </div>
-                </div>
-
                 {/* Phone */}
                 <div className="p-4 bg-white border border-[#CBB89D] rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-sm">
                   <div className="flex items-center gap-3.5 min-w-0">
@@ -255,37 +250,6 @@ export const ContactPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Interactive Google Map of Thanjavur Location */}
-              <div className="space-y-2">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="font-bold uppercase tracking-wider text-[#573B2E]">
-                    Geographic Location
-                  </span>
-                  <a
-                    href="https://maps.google.com/?q=Madukkur+Pattukkottai+Thanjavur+Tamil+Nadu"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="text-[#68734B] hover:underline flex items-center gap-1"
-                  >
-                    Open in Google Maps <ExternalLink className="w-3 h-3" />
-                  </a>
-                </div>
-                <div className="rounded-xl overflow-hidden border border-[#CBB89D] shadow-sm bg-white aspect-[16/10]">
-                  <iframe
-                    title="P R GNANARAJA EXPORT Location"
-                    src="https://maps.google.com/maps?q=Madukkur,Pattukkottai,Thanjavur,Tamil+Nadu,India&t=&z=12&ie=UTF8&iwloc=&output=embed"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen={false}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </div>
-                <p className="text-[11px] text-[#806044]">
-                  * Centered at Madukkur Post, Pattukkottai Taluk, Thanjavur District (PIN: 614903).
-                </p>
-              </div>
             </div>
 
             {/* Right Column: B2B Contact Enquiry Form */}
@@ -434,6 +398,7 @@ export const ContactPage: React.FC = () => {
                               {p.name} ({p.businessType})
                             </option>
                           ))}
+                          <option value="Others">Others</option>
                         </select>
                       </div>
                     </div>

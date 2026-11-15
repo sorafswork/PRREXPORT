@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
-import { heroCoconutGroveImg } from '../assets/images';
 
 interface HeroVideoProps {
   onExploreProducts: () => void;
@@ -16,9 +15,8 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [videoError, setVideoError] = useState(false);
 
-  // Portable 10-second AI-generated background video showing the complete journey:
-  // Coconut trees -> Harvesting coconuts -> Extracting coconut oil -> Producing cocopeat & coir products
   const videoSource = './videos/coconut-journey.mp4';
+  const fallbackPoster = './assets/aistudio/c7_001838b2.jpeg';
 
   const handleScrollDown = () => {
     if (onScrollDown) {
@@ -33,7 +31,7 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({
 
   return (
     <section className="relative w-full min-h-[calc(100svh-5.5rem)] sm:min-h-[92vh] lg:min-h-screen flex items-center justify-center overflow-hidden bg-[#412F26]">
-      {/* 1. Continuous 10s AI-Generated Coconut Journey Background Video */}
+      {/* 1. Continuous AI-Generated Coconut Journey Background Video */}
       {!videoError && (
         <video
           autoPlay
@@ -41,7 +39,7 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({
           loop
           playsInline
           preload="auto"
-          poster={heroCoconutGroveImg}
+          poster={fallbackPoster}
           onLoadedData={() => setVideoLoaded(true)}
           onError={() => setVideoError(true)}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
@@ -54,8 +52,8 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({
 
       {/* 2. High-Resolution Fallback Image with Smooth Ken Burns Animatic Effect */}
       <img
-        src={heroCoconutGroveImg}
-        alt="Lush coconut plantation in Thanjavur, Tamil Nadu"
+        src={fallbackPoster}
+        alt="Lush natural coconut plantation"
         className={`absolute inset-0 w-full h-full object-cover animate-ken-burns transition-opacity duration-1000 ${
           videoLoaded && !videoError ? 'opacity-0' : 'opacity-100'
         }`}
@@ -80,12 +78,12 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({
 
         {/* Main Heading */}
         <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#EDE1D2] leading-[1.15] text-balance mb-4 sm:mb-5 drop-shadow">
-          From Our Farms to Global Markets.
+          Experience the Purity of coconut oil, Virgin coconut oil from DHAYALI.
         </h1>
 
         {/* Supporting Text */}
         <p className="text-sm sm:text-xl text-[#EDE1D2] max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10 text-balance font-sans font-normal drop-shadow">
-          Experience the Purity of coconut oil, Virgin coconut oil from DHAYALI.
+          From Our Source to Global Markets.
         </p>
 
         {/* Action Buttons */}

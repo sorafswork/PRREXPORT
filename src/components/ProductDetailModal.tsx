@@ -54,8 +54,8 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
               }`}
             >
               {product.businessType === 'Manufacturing'
-                ? 'Own Farm & Small-Scale Manufacturing'
-                : 'Merchant Export Sourcing'}
+                ? 'Direct Producer & Oil Manufacturing'
+                : 'Global Export Supply'}
             </span>
           </div>
           <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#573B2E]">
@@ -78,7 +78,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 className="w-full h-full object-cover"
               />
               <div className="absolute bottom-2 left-2 px-2.5 py-1 bg-[#573B2E]/80 backdrop-blur-sm text-[#EDE1D2] text-[10px] uppercase font-bold tracking-wider rounded">
-                Export Grade Quality
+                Global Standard Quality
               </div>
             </div>
 

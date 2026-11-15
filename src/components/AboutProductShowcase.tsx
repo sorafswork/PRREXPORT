@@ -1,19 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MessageCircle, ArrowRight, ArrowLeft, Check, Sparkles } from 'lucide-react';
+import { MessageCircle, ArrowRight, ArrowLeft } from 'lucide-react';
 import { Product } from '../types';
 import { PRODUCTS } from '../data/products';
 import { COMPANY_INFO } from '../data/company';
-import {
-  productNaturalCoconutOilImg,
-  productVirginCoconutOilImg,
-  productCocopeatJiffyDiscsImg,
-  productCocopeat5kgBlocksImg,
-  productCocopeat650gBricksImg,
-  productCoirPotsImg,
-  productCoirScrubbersImg,
-  productCoirPvcMatImg,
-} from '../assets/images';
 
 interface AboutProductShowcaseProps {
   onOrderNow: (product: Product) => void;
@@ -22,79 +12,14 @@ interface AboutProductShowcaseProps {
 export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOrderNow }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const showcaseProducts: {
-    id: string;
-    name: string;
-    categoryLabel: string;
-    shortDesc: string;
-    image: string;
-    productRef: Product;
-  }[] = [
-    {
-      id: 'natural-coconut-oil',
-      name: 'Natural Coconut Oil',
-      categoryLabel: 'Small-Scale Manufacturing',
-      shortDesc: 'Naturally prepared coconut oil for everyday use. 100% natural, unrefined, and rotary extracted from sun-dried copra.',
-      image: productNaturalCoconutOilImg,
-      productRef: PRODUCTS[0],
-    },
-    {
-      id: 'virgin-coconut-oil',
-      name: 'Virgin Coconut Oil',
-      categoryLabel: 'Small-Scale Manufacturing',
-      shortDesc: 'Pure cold-fermented oil extracted straight from fresh coconut milk, retaining natural antioxidants and delicate aroma.',
-      image: productVirginCoconutOilImg,
-      productRef: PRODUCTS[1],
-    },
-    {
-      id: 'cocopeat-disc-jiffy-plugs',
-      name: 'Cocopeat Disc',
-      categoryLabel: 'Merchant Export',
-      shortDesc: 'Lightweight, rapid-expansion coir discs engineered for seed starting, cuttings, and nursery propagation.',
-      image: productCocopeatJiffyDiscsImg,
-      productRef: PRODUCTS[2],
-    },
-    {
-      id: 'cocopeat-5kg-blocks',
-      name: 'Cocopeat 5 kg Blocks',
-      categoryLabel: 'Merchant Export',
-      shortDesc: 'High-expansion (17–19 L/kg) washed coir blocks with low electrical conductivity (EC < 0.5) for commercial farms and horticulture.',
-      image: productCocopeat5kgBlocksImg,
-      productRef: PRODUCTS[3],
-    },
-    {
-      id: 'cocopeat-650g-bricks',
-      name: 'Cocopeat 650 gram Bricks',
-      categoryLabel: 'Merchant Export',
-      shortDesc: 'Convenient 650g briquettes yielding 8 litres of rich growing substrate, perfect for home gardening and retail garden centers.',
-      image: productCocopeat650gBricksImg,
-      productRef: PRODUCTS[4],
-    },
-    {
-      id: 'coir-pots',
-      name: 'Coir Pots',
-      categoryLabel: 'Merchant Export',
-      shortDesc: '100% biodegradable coir fiber pots for direct soil transplantation without root disturbance or transplant shock.',
-      image: productCoirPotsImg,
-      productRef: PRODUCTS[5],
-    },
-    {
-      id: 'coir-scrubbers',
-      name: 'Coir Scrubbers',
-      categoryLabel: 'Merchant Export',
-      shortDesc: 'Eco-friendly, non-scratch natural coir fiber scouring pads for plastic-free kitchen and utility cleaning.',
-      image: productCoirScrubbersImg,
-      productRef: PRODUCTS[6],
-    },
-    {
-      id: 'coir-pvc-backed-mats',
-      name: 'Coir PVC Backed Mats',
-      categoryLabel: 'Merchant Export',
-      shortDesc: 'Heavy-duty entrance mats crafted from dense natural coir bristles with non-slip PVC rubber backing.',
-      image: productCoirPvcMatImg,
-      productRef: PRODUCTS[7],
-    },
-  ];
+  const showcaseProducts = PRODUCTS.map((p) => ({
+    id: p.id,
+    name: p.id === 'cocopeat-disc-jiffy-plugs' ? 'Cocopeat Disc / Jiffy Plugs' : p.name,
+    categoryLabel: p.businessType,
+    shortDesc: p.description,
+    image: p.image,
+    productRef: p,
+  }));
 
   const current = showcaseProducts[activeIndex];
 
@@ -126,7 +51,7 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
             Our Natural Product Range
           </h2>
           <p className="text-xs sm:text-sm text-[#EDE1D2]/80">
-            From farm-extracted oils to export-grade cocopeat substrates. Seamlessly explore each product below.
+            From producer-extracted oils to global-standard cocopeat substrates. Seamlessly explore each product below.
           </p>
         </div>
 
@@ -167,8 +92,9 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
                   <motion.img
                     src={current.image}
                     alt={current.name}
-                    className="w-full h-full object-cover"
-                    initial={{ scale: 0.96 }}
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover object-center"
+                    initial={{ scale: 0.98 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.4 }}
                   />

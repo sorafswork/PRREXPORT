@@ -1,4 +1,4 @@
-export type ProductCategory = 'coconut-oil' | 'cocopeat' | 'coir';
+export type ProductCategory = 'coconut-oil' | 'cocopeat' | 'coir' | 'coconut-shell';
 
 export interface ProductSpec {
   label: string;
@@ -10,7 +10,7 @@ export interface Product {
   name: string;
   category: ProductCategory;
   categoryName: string;
-  businessType: 'Manufacturing' | 'Merchant Export';
+  businessType: 'Manufacturing' | 'Export';
   tagline: string;
   description: string;
   image: string;
@@ -27,16 +27,6 @@ export interface Product {
 export interface CompanyInfo {
   name: string;
   tagline: string;
-  address: {
-    line1: string;
-    line2: string;
-    taluk: string;
-    district: string;
-    state: string;
-    country: string;
-    pincode: string;
-    full: string;
-  };
   phone: string;
   phoneDisplay: string;
   email: string;

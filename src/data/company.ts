@@ -2,17 +2,7 @@ import { CompanyInfo } from '../types';
 
 export const COMPANY_INFO: CompanyInfo = {
   name: 'P R GNANARAJA EXPORT',
-  tagline: 'From Our Farms to Global Markets',
-  address: {
-    line1: 'No 8, Vadugankuthagai',
-    line2: 'Madukkur Post',
-    taluk: 'Pattukkottai Taluk',
-    district: 'Thanjavur District',
-    state: 'Tamil Nadu',
-    country: 'India',
-    pincode: '614903',
-    full: 'No 8, Vadugankuthagai, Madukkur Post, Pattukkottai Taluk, Thanjavur District, Tamil Nadu, India – 614903.'
-  },
+  tagline: 'From Our Source to Global Markets',
   phone: '+919788600936',
   phoneDisplay: '+91 9788600936',
   email: 'info@prgnanaraja.com',
@@ -33,8 +23,8 @@ export const COMPANY_INFO: CompanyInfo = {
     {
       name: 'Amazon',
       url: 'https://www.amazon.in',
-      badge: 'Retail & Commercial Marketplace',
-      description: 'Retail & business customer marketplace presence for consumer-packed goods.'
+      badge: 'Consumer & Commercial Marketplace',
+      description: 'Direct consumer & business customer marketplace presence for packaged goods.'
     },
     {
       name: 'IndiaMART',

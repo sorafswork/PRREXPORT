@@ -66,7 +66,7 @@ export const Header: React.FC<HeaderProps> = ({
               P R GNANARAJA EXPORT
             </span>
             <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-[#68734B] font-semibold truncate">
-              Farming · Manufacturing · Export
+              Producer · Manufacturing · Export
             </span>
           </div>
         </button>
