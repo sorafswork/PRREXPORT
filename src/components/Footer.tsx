@@ -33,7 +33,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestQuote }) =>
               </h3>
             </div>
             <p className="text-sm text-[#CBB89D] leading-relaxed">
-              Rooted as a coconut producer. Pure Natural &amp; Virgin Coconut Oil manufacturing and export solutions for global-standard cocopeat, coir, and coconut shell products worldwide.
+              Rooted as a coconut producer. Pure Natural &amp; Virgin Coconut Oil manufacturer and exporter of global-standard cocopeat, coir, and coconut shell products worldwide.
             </p>
             <div className="pt-2">
               <button

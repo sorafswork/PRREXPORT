@@ -48,14 +48,14 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
             <span className="text-[#806044]">·</span>
             <span
               className={`font-medium px-2 py-0.5 rounded text-[11px] ${
-                product.businessType === 'Manufacturing'
+                product.businessType === 'Manufacturer'
                   ? 'bg-[#68734B]/15 text-[#68734B] border border-[#68734B]/30'
                   : 'bg-[#573B2E]/10 text-[#573B2E] border border-[#573B2E]/20'
               }`}
             >
-              {product.businessType === 'Manufacturing'
-                ? 'Direct Producer & Oil Manufacturing'
-                : 'Global Export Supply'}
+              {product.businessType === 'Manufacturer'
+                ? 'Direct Producer & Oil Manufacturer'
+                : 'Global Exporter Supply'}
             </span>
           </div>
           <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#573B2E]">

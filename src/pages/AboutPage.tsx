@@ -23,7 +23,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
               Our Producer Heritage &amp; Export Commitment
             </h1>
             <p className="text-sm sm:text-base text-[#EDE1D2]/90 leading-relaxed max-w-2xl">
-              We combine our coconut producer heritage with pure oil manufacturing and dependable export of coir and cocopeat products.
+              We combine our coconut producer heritage as a pure oil manufacturer and dependable exporter of coir and cocopeat products.
             </p>
           </div>
         </div>
@@ -55,7 +55,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
                 Origin &amp; Focus
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#573B2E] leading-snug">
-                Connecting Our Source with International Buyers
+                Connecting Our Source with Global Markets
               </h2>
               <p className="text-sm sm:text-base text-[#412F26] leading-relaxed">
                 P R Gnanaraja Export started out as a coconut wholesaler in 2021. After farming coconuts for decades, we started producing coconut oil and virgin coconut oil. As a manufacturer and merchant exporter, we currently address both B2B and B2C demands by shipping over 12 products, including coconut, coir, and cocopeat products, to over five countries and throughout India. We are eager to make more meaningful contributions to the globe.
@@ -69,11 +69,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
                 </div>
                 <div className="p-2.5 sm:p-3 bg-[#E4DAC2] border border-[#CBB89D] rounded-lg text-center">
                   <Factory className="w-4 h-4 sm:w-5 sm:h-5 mx-auto text-[#68734B] mb-1" />
-                  <p className="font-serif font-bold text-[11px] sm:text-xs text-[#573B2E]">Manufacturing</p>
+                  <p className="font-serif font-bold text-[11px] sm:text-xs text-[#573B2E]">Manufacturer</p>
                 </div>
                 <div className="p-2.5 sm:p-3 bg-[#E4DAC2] border border-[#CBB89D] rounded-lg text-center">
                   <Globe2 className="w-4 h-4 sm:w-5 sm:h-5 mx-auto text-[#68734B] mb-1" />
-                  <p className="font-serif font-bold text-[11px] sm:text-xs text-[#573B2E] leading-tight">Export</p>
+                  <p className="font-serif font-bold text-[11px] sm:text-xs text-[#573B2E] leading-tight">Exporter</p>
                 </div>
               </div>
             </div>

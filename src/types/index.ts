@@ -10,7 +10,7 @@ export interface Product {
   name: string;
   category: ProductCategory;
   categoryName: string;
-  businessType: 'Manufacturing' | 'Export';
+  businessType: 'Manufacturer' | 'Exporter';
   tagline: string;
   description: string;
   image: string;

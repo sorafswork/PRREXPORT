@@ -196,28 +196,28 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                   className="w-full px-3.5 py-2.5 text-sm bg-white border border-[#CBB89D] rounded-md focus:border-[#68734B] focus:ring-1 focus:ring-[#68734B] outline-none text-[#412F26]"
                   required
                 >
-                  <optgroup label="Coconut Oil Products (Manufacturing)">
+                  <optgroup label="Coconut Oil Products (Manufacturer)">
                     {PRODUCTS.filter((p) => p.category === 'coconut-oil').map((p) => (
                       <option key={p.id} value={p.id}>
                         {p.name} ({p.businessType})
                       </option>
                     ))}
                   </optgroup>
-                  <optgroup label="Cocopeat Products (Export)">
+                  <optgroup label="Cocopeat Products (Exporter)">
                     {PRODUCTS.filter((p) => p.category === 'cocopeat').map((p) => (
                       <option key={p.id} value={p.id}>
                         {p.name} ({p.businessType})
                       </option>
                     ))}
                   </optgroup>
-                  <optgroup label="Coir Products (Export)">
+                  <optgroup label="Coir Products (Exporter)">
                     {PRODUCTS.filter((p) => p.category === 'coir').map((p) => (
                       <option key={p.id} value={p.id}>
                         {p.name} ({p.businessType})
                       </option>
                     ))}
                   </optgroup>
-                  <optgroup label="Coconut Shell Products (Export)">
+                  <optgroup label="Coconut Shell Products (Exporter)">
                     {PRODUCTS.filter((p) => p.category === 'coconut-shell').map((p) => (
                       <option key={p.id} value={p.id}>
                         {p.name} ({p.businessType})

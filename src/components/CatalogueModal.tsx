@@ -62,8 +62,8 @@ export const CatalogueModal: React.FC<CatalogueModalProps> = ({
       content += `Entity: P R GNANARAJA EXPORT\n\n`;
       content += `Core Activities:\n`;
       content += `1. Coconut Producer: Cultivation and sourcing of quality mature coconuts.\n`;
-      content += `2. Coconut Oil Manufacturing: Production of 100% pure Natural Coconut Oil (rotary extracted) and Virgin Coconut Oil (fermentation extracted).\n`;
-      content += `3. Global Exporting: Supply of premium cocopeat (5kg blocks, 650g bricks, jiffy discs), coir products (biodegradable pots, mulch mats, scrubber pads, PVC backed mats), and coconut shell dessert cups.\n\n`;
+      content += `2. Coconut Oil Manufacturer: Production of 100% pure Natural Coconut Oil (rotary extracted) and Virgin Coconut Oil (fermentation extracted).\n`;
+      content += `3. Global Exporter: Supply of premium cocopeat (5kg blocks, 650g bricks, jiffy discs), coir products (biodegradable pots, mulch mats, scrubber pads, PVC backed mats), and coconut shell dessert cups.\n\n`;
       content += `Future Expansion: Sesame Oil & Groundnut Oil manufacturing planned for next year.\n`;
     }
 
@@ -158,11 +158,11 @@ export const CatalogueModal: React.FC<CatalogueModalProps> = ({
               </div>
               <div className="space-y-3">
                 <p className="text-xs text-[#806044]">
-                  We present our confirmed product portfolio across two distinct operating verticals: Coconut Oil Manufacturing and Global Exporting.
+                  We present our confirmed product portfolio across two distinct operating verticals: Coconut Oil Manufacturer and Global Exporter.
                 </p>
                 <div className="space-y-2">
                   <div className="p-2.5 bg-[#EDE1D2]/50 rounded border border-[#CBB89D]/50">
-                    <p className="font-semibold text-[#573B2E] text-xs">A. Coconut Oil Products (Manufacturing)</p>
+                    <p className="font-semibold text-[#573B2E] text-xs">A. Coconut Oil Products (Manufacturer)</p>
                     <p className="text-[11px] text-[#412F26]">
                       1. Natural Coconut Oil (Rotary extraction, copra, 250ml–1000ml & bulk)
                       <br />
@@ -170,7 +170,7 @@ export const CatalogueModal: React.FC<CatalogueModalProps> = ({
                     </p>
                   </div>
                   <div className="p-2.5 bg-[#EDE1D2]/50 rounded border border-[#CBB89D]/50">
-                    <p className="font-semibold text-[#573B2E] text-xs">B. Cocopeat Products (Export)</p>
+                    <p className="font-semibold text-[#573B2E] text-xs">B. Cocopeat Products (Exporter)</p>
                     <p className="text-[11px] text-[#412F26]">
                       1. Cocopeat Disc / Jiffy Plugs (25–100mm, EC &lt; 0.5, pH 5.6–6.6)
                       <br />
@@ -180,7 +180,7 @@ export const CatalogueModal: React.FC<CatalogueModalProps> = ({
                     </p>
                   </div>
                   <div className="p-2.5 bg-[#EDE1D2]/50 rounded border border-[#CBB89D]/50">
-                    <p className="font-semibold text-[#573B2E] text-xs">C. Coir &amp; Coconut Shell Products (Export)</p>
+                    <p className="font-semibold text-[#573B2E] text-xs">C. Coir &amp; Coconut Shell Products (Exporter)</p>
                     <p className="text-[11px] text-[#412F26]">
                       1. Coir Pots (Circular, 3, 4, 6 and 10 inches, 100% biodegradable)
                       <br />
@@ -250,7 +250,7 @@ export const CatalogueModal: React.FC<CatalogueModalProps> = ({
                 P R GNANARAJA EXPORT is an integrated coconut producer, manufacturer and trusted international supplier of natural cocopeat and coir products.
               </p>
               <p className="text-xs text-[#412F26] leading-relaxed">
-                The company combines direct coconut producer heritage with pure coconut oil manufacturing and reliable export capabilities for coir, cocopeat, and coconut shell products.
+                The company combines direct coconut producer heritage as a pure coconut oil manufacturer and reliable exporter of coir, cocopeat, and coconut shell products.
               </p>
               <div className="p-3 bg-[#E4DAC2]/50 rounded text-xs text-[#573B2E] space-y-1">
                 <p className="font-semibold">Official Contact Details:</p>
