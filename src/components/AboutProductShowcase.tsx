@@ -50,9 +50,6 @@ export const AboutProductShowcase: React.FC<AboutProductShowcaseProps> = ({ onOr
           <h2 className="font-serif text-2xl sm:text-4xl font-bold text-[#EDE1D2]">
             Our Natural Product Range
           </h2>
-          <p className="text-xs sm:text-sm text-[#EDE1D2]/80">
-            From producer-extracted oils to global-standard cocopeat substrates. Seamlessly explore each product below.
-          </p>
         </div>
 
         {/* Product Navigation Tabs (Wrapped cleanly on both mobile & desktop) */}

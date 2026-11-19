@@ -58,10 +58,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onRequestQuote
                 Connecting Our Source with International Buyers
               </h2>
               <p className="text-sm sm:text-base text-[#412F26] leading-relaxed">
-                P R GNANARAJA EXPORT is anchored in direct producer roots: cultivating coconut palms, managing copra drying, and manufacturing pure unrefined oils with disciplined quality control.
-              </p>
-              <p className="text-sm text-[#573B2E] leading-relaxed">
-                Through our export division, we supply tested, low-EC cocopeat substrates, molded coir, and coconut shell products for international horticulture, greenhouses, and commercial distributors.
+                P R Gnanaraja Export started out as a coconut wholesaler in 2021. After farming coconuts for decades, we started producing coconut oil and virgin coconut oil. As a manufacturer and merchant exporter, we currently address both B2B and B2C demands by shipping over 12 products, including coconut, coir, and cocopeat products, to over five countries and throughout India. We are eager to make more meaningful contributions to the globe.
               </p>
 
               {/* Three Business Activities Visual Strip */}

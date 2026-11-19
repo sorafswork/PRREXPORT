@@ -2,10 +2,8 @@ import { Product } from '../types';
 import {
   productVirginCoconutOilImg,
   productCocopeatJiffyDiscsImg,
-  productCocopeat5kgBlocksImg,
   productCocopeat650gBricksImg,
   productCoirPotsImg,
-  productCoirMulchMatsImg,
   productCoirPvcMatImg,
   productSesameOilImg,
   productGroundnutOilImg,
@@ -115,7 +113,7 @@ export const PRODUCTS: Product[] = [
     businessType: 'Export',
     tagline: 'High-Expansion Compressed 5 kg Blocks for Agriculture & Horticulture',
     description: 'Standard 5 kg compressed cocopeat blocks washed for low electrical conductivity. Exceptional moisture retention, optimal porosity, and proven root aeration for commercial greenhouses, potting soil blenders, and agricultural producers.',
-    image: productCocopeat5kgBlocksImg,
+    image: './assets/aistudio/WhatsApp_Image_2026-11-19_at_09.11.36__1__9aa5fae3.jpeg',
     rawMaterial: 'Aged Cocopeat pith',
     extractionOrProcess: 'Hydraulic high compression',
     features: [
@@ -211,7 +209,7 @@ export const PRODUCTS: Product[] = [
     businessType: 'Export',
     tagline: 'Circular Natural Coir Fiber Weed Control & Moisture Retention Mats',
     description: 'High-density 1200 GSM circular coir mulch mats designed to protect young trees and potted plants by retaining soil moisture, suppressing weeds naturally, and regulating root-zone temperature.',
-    image: productCoirMulchMatsImg,
+    image: './assets/aistudio/WhatsApp_Image_2026-11-19_at_09.11.36_e7ecd45d.jpeg',
     rawMaterial: 'Coir fiber',
     extractionOrProcess: 'Needle-punched compressed coir mat (with latex and without latex)',
     features: [

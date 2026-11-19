@@ -174,57 +174,36 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestQuote }) =>
             </div>
           </div>
 
-          {/* Column 4: B2B Platforms & Social Media */}
+          {/* Column 4: Social Media */}
           <div className="space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#CBB89D]">
-              Find Us On B2B Platforms
+              Follow &amp; Connect
             </h4>
-            <div className="grid grid-cols-2 gap-2 text-xs">
-              {COMPANY_INFO.b2bPlatforms.map((platform) => (
-                <a
-                  key={platform.name}
-                  href={platform.url}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="p-2.5 bg-[#412F26]/60 border border-[#806044]/40 rounded hover:bg-[#412F26] hover:border-[#CBB89D] transition-colors flex flex-col justify-between group"
-                >
-                  <span className="font-semibold text-[#EDE1D2] flex items-center justify-between">
-                    {platform.name}
-                    <ExternalLink className="w-3 h-3 opacity-60 group-hover:opacity-100" />
-                  </span>
-                  <span className="text-[10px] text-[#CBB89D] mt-1 line-clamp-1">Official Site</span>
-                </a>
-              ))}
-            </div>
-
-            <div className="pt-2">
-              <p className="text-xs text-[#CBB89D] mb-2 font-medium">Follow & Connect</p>
-              <div className="flex items-center gap-3">
-                <a
-                  href={COMPANY_INFO.socials.instagram}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="px-3 py-1.5 bg-[#412F26] hover:bg-[#68734B] text-[#EDE1D2] text-xs rounded transition-colors"
-                >
-                  Instagram
-                </a>
-                <a
-                  href={COMPANY_INFO.socials.facebook}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="px-3 py-1.5 bg-[#412F26] hover:bg-[#68734B] text-[#EDE1D2] text-xs rounded transition-colors"
-                >
-                  Facebook
-                </a>
-                <a
-                  href={COMPANY_INFO.socials.linkedin}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="px-3 py-1.5 bg-[#412F26] hover:bg-[#68734B] text-[#EDE1D2] text-xs rounded transition-colors"
-                >
-                  LinkedIn
-                </a>
-              </div>
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href={COMPANY_INFO.socials.instagram}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="px-3 py-1.5 bg-[#412F26] hover:bg-[#68734B] text-[#EDE1D2] text-xs rounded transition-colors"
+              >
+                Instagram
+              </a>
+              <a
+                href={COMPANY_INFO.socials.facebook}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="px-3 py-1.5 bg-[#412F26] hover:bg-[#68734B] text-[#EDE1D2] text-xs rounded transition-colors"
+              >
+                Facebook
+              </a>
+              <a
+                href={COMPANY_INFO.socials.linkedin}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="px-3 py-1.5 bg-[#412F26] hover:bg-[#68734B] text-[#EDE1D2] text-xs rounded transition-colors"
+              >
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>
@@ -235,7 +214,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestQuote }) =>
             &copy; {currentYear} <span className="text-[#EDE1D2] font-semibold">{COMPANY_INFO.name}</span>. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-[11px] text-[#CBB89D]/80">
-            <span>Agricultural &amp; Coir Exporter</span>
+            <span>Cocopeat &amp; Coir Exporter</span>
             <span>·</span>
             <span>Coconut Producer &amp; Oil Manufacturer</span>
           </div>

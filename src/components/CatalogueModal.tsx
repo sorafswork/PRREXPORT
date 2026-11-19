@@ -19,6 +19,12 @@ export const CatalogueModal: React.FC<CatalogueModalProps> = ({
   const [activeTab, setActiveTab] = useState<'catalogue' | 'specs' | 'profile'>(defaultTab);
   const [downloadSuccess, setDownloadSuccess] = useState(false);
 
+  React.useEffect(() => {
+    if (isOpen) {
+      setActiveTab(defaultTab);
+    }
+  }, [isOpen, defaultTab]);
+
   if (!isOpen) return null;
 
   const handleDownload = () => {
@@ -241,7 +247,7 @@ export const CatalogueModal: React.FC<CatalogueModalProps> = ({
                 </h3>
               </div>
               <p className="text-xs text-[#412F26] leading-relaxed">
-                P R GNANARAJA EXPORT is an integrated coconut producer, pure oil manufacturer, and international supplier of natural coconut-based products.
+                P R GNANARAJA EXPORT is an integrated coconut producer, manufacturer and trusted international supplier of natural cocopeat and coir products.
               </p>
               <p className="text-xs text-[#412F26] leading-relaxed">
                 The company combines direct coconut producer heritage with pure coconut oil manufacturing and reliable export capabilities for coir, cocopeat, and coconut shell products.

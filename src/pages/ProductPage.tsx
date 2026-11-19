@@ -52,9 +52,6 @@ export const ProductPage: React.FC<ProductPageProps> = ({
             <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#EDE1D2] leading-tight">
               Global Standard Coconut Oils, Cocopeat &amp; Coir Products
             </h1>
-            <p className="text-sm sm:text-base text-[#EDE1D2]/90 leading-relaxed">
-              Explore our confirmed product specifications, standard packaging, and container capacities. Direct manufacturing of pure oils and reliable export supply of natural horticultural coir and coconut shell solutions.
-            </p>
           </div>
         </div>
       </section>
@@ -65,11 +62,11 @@ export const ProductPage: React.FC<ProductPageProps> = ({
           {/* Category Tabs */}
           <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-2">
             {[
-              { id: 'all', label: `All Products (${PRODUCTS.length})` },
-              { id: 'coconut-oil', label: 'Coconut Oil (Mfg)' },
-              { id: 'cocopeat', label: 'Cocopeat (Export)' },
-              { id: 'coir', label: 'Coir (Export)' },
-              { id: 'coconut-shell', label: 'Coconut Shell (Export)' },
+              { id: 'all', label: 'All Products' },
+              { id: 'coconut-oil', label: 'Coconut Oil' },
+              { id: 'cocopeat', label: 'Cocopeat' },
+              { id: 'coir', label: 'Coir' },
+              { id: 'coconut-shell', label: 'Coconut Shell' },
             ].map((tab) => {
               const isActive = activeCategory === tab.id;
               return (
@@ -269,21 +266,34 @@ export const ProductPage: React.FC<ProductPageProps> = ({
             <div className="bg-white rounded-lg border border-[#CBB89D] overflow-hidden text-xs">
               {containerProduct === 'cocopeat-5kg' && (
                 <div className="p-5 space-y-3">
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <div className="p-3 bg-[#EDE1D2]/40 rounded border border-[#CBB89D]/50">
-                      <span className="text-[#806044] block">20ft Dry Container</span>
-                      <p className="font-mono text-base font-bold text-[#573B2E] mt-1">Approx. 12 – 14 MT</p>
-                      <p className="text-[11px] text-[#412F26] mt-0.5">Approx. 2,400 to 2,800 blocks (palletized or floor loaded)</p>
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+                    <div className="lg:col-span-9 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                      <div className="p-3 bg-[#EDE1D2]/40 rounded border border-[#CBB89D]/50">
+                        <span className="text-[#806044] block">20ft Dry Container</span>
+                        <p className="font-mono text-base font-bold text-[#573B2E] mt-1">Approx. 12 – 14 MT</p>
+                        <p className="text-[11px] text-[#412F26] mt-0.5">Approx. 2,400 to 2,800 blocks (palletized or floor loaded)</p>
+                      </div>
+                      <div className="p-3 bg-[#EDE1D2]/40 rounded border border-[#CBB89D]/50">
+                        <span className="text-[#806044] block">40ft High Cube (HC)</span>
+                        <p className="font-mono text-base font-bold text-[#573B2E] mt-1">Approx. 24 – 26 MT</p>
+                        <p className="text-[11px] text-[#412F26] mt-0.5">Approx. 4,800 to 5,200 blocks (20 pallets)</p>
+                      </div>
+                      <div className="p-3 bg-[#EDE1D2]/40 rounded border border-[#CBB89D]/50">
+                        <span className="text-[#806044] block">Expansion Volume</span>
+                        <p className="font-mono text-base font-bold text-[#68734B] mt-1">17 – 19 Litres / kg</p>
+                        <p className="text-[11px] text-[#412F26] mt-0.5">Approx. 85L reconstituted volume per block</p>
+                      </div>
                     </div>
-                    <div className="p-3 bg-[#EDE1D2]/40 rounded border border-[#CBB89D]/50">
-                      <span className="text-[#806044] block">40ft High Cube (HC)</span>
-                      <p className="font-mono text-base font-bold text-[#573B2E] mt-1">Approx. 24 – 26 MT</p>
-                      <p className="text-[11px] text-[#412F26] mt-0.5">Approx. 4,800 to 5,200 blocks (20 pallets)</p>
-                    </div>
-                    <div className="p-3 bg-[#EDE1D2]/40 rounded border border-[#CBB89D]/50">
-                      <span className="text-[#806044] block">Expansion Volume</span>
-                      <p className="font-mono text-base font-bold text-[#68734B] mt-1">17 – 19 Litres / kg</p>
-                      <p className="text-[11px] text-[#412F26] mt-0.5">Approx. 85L reconstituted volume per block</p>
+                    <div className="lg:col-span-3 flex items-center gap-3 p-2.5 bg-[#EDE1D2]/40 rounded border border-[#CBB89D]/50">
+                      <img
+                        src="./assets/aistudio/WhatsApp_Image_2026-11-19_at_09.11.35__2__870f4c10.jpeg"
+                        alt="Bulk cocopeat blocks with pallets in block storage"
+                        className="w-20 h-20 rounded object-cover object-center shrink-0 border border-[#CBB89D]"
+                      />
+                      <div>
+                        <p className="font-serif font-bold text-xs text-[#573B2E]">Bulk Palletized Storage</p>
+                        <p className="text-[11px] text-[#806044] mt-0.5">Cocopeat blocks stacked on export pallets with stretch wrap</p>
+                      </div>
                     </div>
                   </div>
                 </div>
