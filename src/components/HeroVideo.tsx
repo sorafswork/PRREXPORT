@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
 
 interface HeroVideoProps {
@@ -7,34 +7,113 @@ interface HeroVideoProps {
   onScrollDown?: () => void;
 }
 
+const isPortraitViewport = () => {
+  if (typeof window === 'undefined') return false;
+  return (
+    window.innerWidth < 768 ||
+    (window.innerHeight > window.innerWidth && window.innerWidth <= 1024)
+  );
+};
+
 export const HeroVideo: React.FC<HeroVideoProps> = ({
   onExploreProducts,
   onContactUs,
   onScrollDown,
 }) => {
-  const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [videoReady, setVideoReady] = useState(false);
   const [videoError, setVideoError] = useState(false);
-  const [isMobile, setIsMobile] = useState(() =>
-    typeof window !== 'undefined' ? window.matchMedia('(max-width: 767px)').matches : false
-  );
+  const [isPortrait, setIsPortrait] = useState<boolean>(isPortraitViewport);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (typeof window === 'undefined') return;
-    const mq = window.matchMedia('(max-width: 767px)');
-    const handleChange = (e: MediaQueryListEvent) => {
-      setIsMobile(e.matches);
-      setVideoLoaded(false);
-      setVideoError(false);
+    const syncViewport = () => {
+      const next = isPortraitViewport();
+      setIsPortrait((prev) => {
+        if (prev !== next) {
+          setVideoReady(false);
+          setVideoError(false);
+        }
+        return next;
+      });
     };
-    setIsMobile(mq.matches);
-    mq.addEventListener('change', handleChange);
-    return () => mq.removeEventListener('change', handleChange);
+    syncViewport();
+    window.addEventListener('resize', syncViewport, { passive: true });
+    window.addEventListener('orientationchange', syncViewport, { passive: true });
+    return () => {
+      window.removeEventListener('resize', syncViewport);
+      window.removeEventListener('orientationchange', syncViewport);
+    };
   }, []);
 
-  const videoSource = isMobile
+  const videoSource = isPortrait
     ? './videos/coconut-journey-mobile.mp4'
     : './videos/coconut-journey.mp4';
   const fallbackPoster = './assets/aistudio/c7_001838b2.jpeg';
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || videoError) return;
+
+    // Enforce muted & inline attributes directly on the DOM node for iOS Safari / Android WebView autoplay
+    video.defaultMuted = true;
+    video.muted = true;
+    video.playsInline = true;
+    video.loop = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+
+    if (video.readyState >= 2) {
+      setVideoReady(true);
+    }
+
+    let interactionBound = false;
+    const removeInteractionListeners = () => {
+      if (!interactionBound) return;
+      interactionBound = false;
+      window.removeEventListener('touchstart', tryPlay);
+      window.removeEventListener('pointerdown', tryPlay);
+      window.removeEventListener('scroll', tryPlay);
+    };
+
+    const tryPlay = () => {
+      const el = videoRef.current;
+      if (!el) return;
+      el.muted = true;
+      el.defaultMuted = true;
+      const playPromise = el.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setVideoReady(true);
+            removeInteractionListeners();
+          })
+          .catch(() => {
+            if (!interactionBound) {
+              interactionBound = true;
+              window.addEventListener('touchstart', tryPlay, { passive: true });
+              window.addEventListener('pointerdown', tryPlay, { passive: true });
+              window.addEventListener('scroll', tryPlay, { passive: true });
+            }
+          });
+      }
+    };
+
+    const handleVisibility = () => {
+      if (document.visibilityState === 'visible' && videoRef.current?.paused) {
+        tryPlay();
+      }
+    };
+
+    tryPlay();
+
+    document.addEventListener('visibilitychange', handleVisibility);
+    return () => {
+      removeInteractionListeners();
+      document.removeEventListener('visibilitychange', handleVisibility);
+    };
+  }, [videoSource, videoError]);
 
   const handleScrollDown = () => {
     if (onScrollDown) {
@@ -49,34 +128,41 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({
 
   return (
     <section className="relative w-full min-h-[calc(100svh-5.5rem)] sm:min-h-[92vh] lg:min-h-screen flex items-center justify-center overflow-hidden bg-[#412F26]">
-      {/* 1. Continuous AI-Generated Coconut Journey Background Video */}
+      {/* 1. Fallback Image with Smooth Ken Burns Effect (visible underneath until video renders or on error) */}
+      <img
+        src={fallbackPoster}
+        alt="Lush natural coconut plantation"
+        className={`absolute inset-0 w-full h-full object-cover animate-ken-burns transition-opacity duration-700 ${
+          videoReady && !videoError ? 'opacity-0' : 'opacity-100'
+        }`}
+      />
+
+      {/* 2. Continuous AI-Generated Coconut Journey Background Video */}
       {!videoError && (
         <video
+          ref={videoRef}
           key={videoSource}
+          src={videoSource}
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
           poster={fallbackPoster}
-          onLoadedData={() => setVideoLoaded(true)}
+          onLoadedMetadata={() => setVideoReady(true)}
+          onLoadedData={() => setVideoReady(true)}
+          onCanPlay={() => {
+            setVideoReady(true);
+            if (videoRef.current?.paused) {
+              videoRef.current.muted = true;
+              videoRef.current.play().catch(() => {});
+            }
+          }}
+          onPlaying={() => setVideoReady(true)}
           onError={() => setVideoError(true)}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-            videoLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <source src={videoSource} type="video/mp4" />
-        </video>
+          className="absolute inset-0 w-full h-full object-cover opacity-100"
+        />
       )}
-
-      {/* 2. High-Resolution Fallback Image with Smooth Ken Burns Animatic Effect */}
-      <img
-        src={fallbackPoster}
-        alt="Lush natural coconut plantation"
-        className={`absolute inset-0 w-full h-full object-cover animate-ken-burns transition-opacity duration-1000 ${
-          videoLoaded && !videoError ? 'opacity-0' : 'opacity-100'
-        }`}
-      />
 
       {/* 3. Animatic Natural Sunbeam & Caustic Light Filter */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">

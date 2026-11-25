@@ -44,15 +44,15 @@ export const GlobalSourcingRibbon: React.FC = () => {
 
         {/* Our Brand - DHAYALI */}
         <div className="pt-1 flex justify-center">
-          <div className="inline-flex items-center gap-3.5 px-5 py-2.5 bg-[#573B2E]/90 border border-[#EDE1D2]/25 rounded-xl shadow-md">
-            <div className="w-11 h-11 rounded-lg bg-white p-1 flex items-center justify-center shrink-0 overflow-hidden">
+          <div className="inline-flex items-center gap-4 px-5 py-3 bg-[#573B2E]/90 border border-[#EDE1D2]/25 rounded-xl shadow-md">
+            <div className="w-20 h-14 sm:w-24 sm:h-16 rounded-lg bg-white p-0.5 flex items-center justify-center shrink-0 overflow-hidden">
               <img
                 src="./assets/aistudio/WhatsApp_Image_2026-11-19_at_09.11.36__2__f621d827.jpeg"
                 alt="Our Brand – DHAYALI"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain scale-[1.4]"
               />
             </div>
-            <span className="font-serif text-sm sm:text-base font-bold text-[#EDE1D2] tracking-wide">
+            <span className="font-serif text-base sm:text-lg font-bold text-[#EDE1D2] tracking-wide whitespace-nowrap">
               Our Brand – DHAYALI
             </span>
           </div>

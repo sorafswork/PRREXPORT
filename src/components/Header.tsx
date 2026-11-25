@@ -62,7 +62,7 @@ export const Header: React.FC<HeaderProps> = ({
             />
           </div>
           <div className="flex flex-col min-w-0">
-            <span className="font-serif text-[15px] sm:text-xl font-bold tracking-tight text-[#412F26] truncate group-hover:text-[#68734B] transition-colors leading-tight">
+            <span className="font-serif text-[13px] min-[380px]:text-[15px] sm:text-xl font-bold tracking-tight text-[#412F26] whitespace-nowrap group-hover:text-[#68734B] transition-colors leading-tight">
               P R GNANARAJA EXPORT
             </span>
             <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-[#68734B] font-semibold truncate">
