@@ -1,5 +1,6 @@
 import { Product } from '../types';
 import {
+  productNaturalCoconutOilImg,
   productVirginCoconutOilImg,
   productCocopeatJiffyDiscsImg,
   productCocopeat650gBricksImg,
@@ -19,7 +20,7 @@ export const PRODUCTS: Product[] = [
     businessType: 'Manufacturer',
     tagline: '100% Natural, Unrefined & Unsulphured Rotary Pressed Oil',
     description: 'Pure, authentic edible grade coconut oil produced through traditional rotary extraction from premium sun-dried copra. Unrefined, free from chemical bleaching, artificial additives, and sulphuring agents.',
-    image: './assets/edited/natural-coconut-oil.jpg',
+    image: productNaturalCoconutOilImg,
     rawMaterial: 'Coconut copra',
     extractionOrProcess: 'Rotary extraction',
     features: [

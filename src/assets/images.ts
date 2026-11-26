@@ -3,7 +3,7 @@ import coconutOilBottlesImg from './images/coconut_oil_bottles_1794485760376.jpg
 import cocopeatBlocksImg from './images/cocopeat_blocks_1794485761298.jpg';
 import coirEcoProductsImg from './images/coir_eco_products_1794485762086.jpg';
 import futureOilSeedsImg from './images/future_oil_seeds_1794485761510.jpg';
-import productNaturalCoconutOilImg from './images/product_natural_coconut_oil_1794641043427.jpg';
+import productNaturalCoconutOilImg from './images/clean_coconut_oil_1795718222456.jpg';
 import productVirginCoconutOilImg from './images/product_virgin_coconut_oil_1794641044017.jpg';
 import productCocopeatJiffyDiscsImg from './images/product_cocopeat_jiffy_discs_1794641045022.jpg';
 import productCocopeat5kgBlocksImg from './images/product_cocopeat_5kg_blocks_1794641045239.jpg';

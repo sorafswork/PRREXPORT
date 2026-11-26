@@ -7,12 +7,23 @@ interface HeroVideoProps {
   onScrollDown?: () => void;
 }
 
-const isPortraitViewport = () => {
-  if (typeof window === 'undefined') return false;
-  return (
-    window.innerWidth < 768 ||
-    (window.innerHeight > window.innerWidth && window.innerWidth <= 1024)
-  );
+type HeroVideoMode = 'desktop' | 'tablet-land' | 'tablet-port' | 'mobile';
+
+const getHeroVideoMode = (): HeroVideoMode => {
+  if (typeof window === 'undefined') return 'desktop';
+  const w = window.innerWidth;
+  const h = window.innerHeight || 1;
+  if (h > w) {
+    return w >= 600 ? 'tablet-port' : 'mobile';
+  }
+  return w / h < 1.45 ? 'tablet-land' : 'desktop';
+};
+
+const VIDEO_SOURCES: Record<HeroVideoMode, string> = {
+  desktop: './videos/coconut-journey.mp4',
+  'tablet-land': './videos/coconut-journey-tablet-land.mp4',
+  'tablet-port': './videos/coconut-journey-tablet.mp4',
+  mobile: './videos/coconut-journey-mobile.mp4',
 };
 
 export const HeroVideo: React.FC<HeroVideoProps> = ({
@@ -23,13 +34,13 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [videoReady, setVideoReady] = useState(false);
   const [videoError, setVideoError] = useState(false);
-  const [isPortrait, setIsPortrait] = useState<boolean>(isPortraitViewport);
+  const [videoMode, setVideoMode] = useState<HeroVideoMode>(getHeroVideoMode);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const syncViewport = () => {
-      const next = isPortraitViewport();
-      setIsPortrait((prev) => {
+      const next = getHeroVideoMode();
+      setVideoMode((prev) => {
         if (prev !== next) {
           setVideoReady(false);
           setVideoError(false);
@@ -46,9 +57,7 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({
     };
   }, []);
 
-  const videoSource = isPortrait
-    ? './videos/coconut-journey-mobile.mp4'
-    : './videos/coconut-journey.mp4';
+  const videoSource = VIDEO_SOURCES[videoMode];
   const fallbackPoster = './assets/aistudio/c7_001838b2.jpeg';
 
   useEffect(() => {
